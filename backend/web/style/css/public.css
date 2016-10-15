@@ -1,0 +1,95 @@
+i{font-style: normal;}
+body,a,ul,h2,h3{list-style-type: none;margin: 0;padding: 0;text-decoration: none;font-family: "微软雅黑";}
+img{border: none;}
+//html,body{height: 100%;}
+/*头部 start*/
+.x_header_all{width: 100%;background-color: #fff;}
+.x_header{width: 1000px;margin: 0 auto;padding-top: 5px;background-color: #fff;}
+.x_header_left{float: left;}
+.x_header_left a img{margin-top: 7px;height: 51px;}
+.x_header_right{float: right;}
+.x_header:after,.x_header_right_bottom ul:after,.x_section_con:after,.x_second_list:after{content:'';clear: both;width: 1px;height: 1px;display:block;}
+.x_email,.x_exit{display:inline-block;cursor: pointer;font-size: 14px;margin-left: 6px;}
+.x_email,.x_exit{display: inline;}
+.x_header_right_top{text-align: right;}
+.x_header_right_bottom{margin-top: 15px;}
+.x_header_right_bottom li{float: left;}
+
+.x_header_right_bottom li a span{padding: 4px 20px; color: #666;border-top-left-radius: 4px;border-top-right-radius: 4px;}
+.x_header_right_bottom li.x_active a span{background-color: #32639c;color: #fff;}
+.x_header_right_bottom li.active a span{background-color: #32639c;color: #fff;}
+.x_header_right_bottom li a{padding: 0 10px;}
+.x_header_right_bottom li a:hover{color: #000;background-color: #fff;}
+.x_header_right_bottom li a span:hover{background-color: #32639c;color: #fff;}
+.x_email{position: relative;margin-right: 15px;}
+.x_email i{position: absolute;top: -8px;right: -3px;z-index: 1;font-size: 14px;color: #205493;}
+.x_hello{font-size: 14px;cursor: pointer;}
+/*头部end*/
+
+/*left all*/
+.x_section:after,.x_top_title:after{content:'';clear: both;width: 1px;height: 1px;display:block;}
+
+.x_section{width: 1020px;margin: 0 auto;/*background-color: #fff;*/}
+.x_section_all{width: 100%;background-color: #f1f1f1;min-height: 70%;overflow: hidden;zoom:1;    padding-top:  10px;}
+
+
+/*left*/
+.x_section_left{float: left;width: 150px;}
+.x_section_left li{height: 50px;line-height: 50px;text-align: center;border: 1px #ccc solid;border-top:none;cursor: pointer;background-color: #f5f5f5;}
+.x_section_left li:first-child{border-top: 1px #ccc solid;background-color: #f5f5f5;}
+.x_section_left li.x_section_active{color: #205493;border: 1px #fff solid;border-bottom: 1px #ccc solid;background-color: #fff;}
+.x_section_left li.active{color: #205493;border: 1px #fff solid;border-bottom: 1px #ccc solid;background-color: #fff;}
+.x_section_left .nav li a:hover{ background-color: transparent;}
+/*right*/
+.x_section_r{float: right;width: 850px;padding-left: 25px;padding-right: 25px;background-color: #fff;padding-top: 3px;padding-bottom: 20px;}
+/*left all end*/
+
+
+
+
+/*页码*/
+.x_page{position: relative;width: 100%;height: 26px;margin: 40px auto;text-align: center;line-height: 1.7em;text-decoration: none;margin-top: 20px;clear: both;}
+.x_page a, .x_page span {font-size: 14px;font-weight: bold;background-color: #FFF;border: 1px solid #ccc;padding: 3px 9px;line-height: 24px;margin: 0 3px;text-decoration: none;width: 24px;color: #848484;}
+.x_page span {background: #f2f2f2;border: 1px solid #ccc;color: #666666;}
+.x_page a.prev-page, .x_page a.next-page {background-color: #FFF;width: 50px;}
+.x_page a:hover{background: #f2f2f2;color: #666666;border: 1px solid #ccc;}
+
+
+/*设置出价的弹出框*/
+.dialog-close {cursor: pointer;height: 10px;padding: 10px;position: absolute;right: 0;top: 0;width: 10px;}
+.content-box h4 {text-align: center;border-bottom: 1px #999 solid;padding-bottom: 6px;}
+.info-content {padding: 0 10px;}
+.price-describe span {display: inline-block;width: 120px;text-align: right;}
+.inpt {border: 1px solid #9AB3C7;height: 28px;line-height: 28px;padding-left: 5px;}
+.x_close{margin-right: 5px;margin-top: 5px;opacity: 1;}
+.price-describe{text-align: center;}
+.x_green{border:1px #205493 solid;color: #205493;border-radius: 0;padding: 2px 13px;font-size: 12px;}
+.x_green:hover{background-color: #205493;color: #fff;}
+
+
+
+/*弹框详情页*/
+.field-content {margin: 5px 0 20px 0;padding: 10px;border: 1px solid #ccc;overflow: hidden;zoom:1;}
+.user-infor {float: left;width: 280px;}
+.user-infor .icon {width: 90px;/*height: 120px;*/text-align: center;float: left;padding-right: 20px;}
+.user-infor .icon span {font-weight: bold;}
+.price-info {width: 250px;float: left;}
+.price-info .price-item {/*line-height: 26px;*/}
+.x_title_info h2{font-size: 16px;color: #205493;}
+.x_first,.x_second{float: left;}
+.x_first{margin-left: 20px;}
+.x_second{margin-left: 8px;float: right;margin-right: 40px;}
+.x_third{float: right;width: 210px;}
+button.x_close {background: #205493;position: absolute;top: -15px;right: -15px;border-radius: 50%;border: none;width: 30px;height: 30px;opacity: 1;color: #fff;line-height: 1;}
+.x_close.close:hover{background-color: #205493;color: #fff;}
+
+
+/*页脚*/
+.footer{clear: both;padding-bottom: 20px;background-color: #fff; margin: 20px 0;}
+.footer_container{margin:0 auto;text-align: center;background-color: #fff;padding-top: 10px;}
+.footer_container ul{margin: 0 auto;border-top: #205493 1px solid;margin-top: 30px;padding-top: 15px;}
+.footer_container ul li{display: inline-block;padding-right: 3px;border-right: 1px #000 solid;height: 12px;line-height: 12px;}
+.footer_container ul li:last-child{border-right:none;}
+.footer_container p{clear: both;margin-top: 8px;}
+.footer_container a{color: #205493;font-size: 14px;padding: 0 6px;}
+/*页脚   end*/

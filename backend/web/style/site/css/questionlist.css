@@ -1,0 +1,36 @@
+.commonWidth{width: 1040px;}
+.big-carousel{min-width: 1040px;}
+.container{width: 1040px;}
+
+.Introduction-info{color: #999999;}
+.Strategy-Channel{overflow: hidden;zoom:1;}
+.Channel-List{background-color: #ff9900;color: #fff;margin-bottom: 10px;padding: 7px 0;cursor: pointer;}
+.Channel-List a{color: #fff;}
+.Channel-List:nth-child(odd){float: left;width: 45%;text-align: center;}
+.Channel-List:nth-child(even){float: right;width: 45%;text-align: center;}
+.WeHaveDo{padding: 0 10px;}
+.nch-module-filter dl dd.list ul li a.active{color: #ff9900;}
+.f_search{color: #fff;background-color: #ff9900;}
+.btn-default{background-color: #ff7916;color: #fff;border:1px #ff7916 solid;}
+.question-in{width: 300px;margin-top: 6px;}
+.question-input{width: 150px;}
+.f_search{padding: 5px 20px;border-radius: 4px;cursor: pointer;border: 1px #ff9900 solid;}
+.question-in *{display: inline-block;}
+.question-in span{color: #fff;}
+.top-nav{width: 790px;background-color: #ff7916;overflow: hidden;zoom:1;}
+.nav-list{background-color: transparent;}
+
+
+.ManagerList{position: relative;padding-top: 15px;padding-bottom: 15px;border-bottom: 1px #ccc solid;height: 130px;}
+.ManagerList >img{position: absolute;left: 0;width: 80px;height: 80px;border-radius: 50%;}
+.ManagerListInfo{margin-left: 96px;}
+.btn-see{background-color: #ccc;padding: 4px 20px;border-radius: 4px;color: #fff;cursor: pointer;}
+.ManagerListTitle b{font-size: 16px;margin-right: 10px;}
+.ManagerListTitle a{color: #ff7916;font-size: 18px;}
+.ServiceQ span{font-size: 14px;color: #000;max-height: 34px;line-height: 17px;overflow: hidden;display: inline-block;}
+.ServiceQ{margin-top: 10px;margin-bottom: 10px;}
+.user,.userq{padding-left: 20px;padding-top: 2px;padding-bottom: 2px;color: #999999;cursor: pointer;}
+.user{background: url(../img/user.png) no-repeat left center;background-size: 15px 15px;margin-right: 20px;}
+.userq{background: url(../img/userq.png) no-repeat left center;background-size: 15px 15px;}
+.empty,.empty-info{margin-top: 35px;text-align: center;}
+.timeq{float: right;color: #999;}

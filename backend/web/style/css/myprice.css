@@ -1,0 +1,9 @@
+.x_section_title {font-size: 20px;text-align: center;margin-top: 20px;margin-bottom: 10px;}
+.x_reset_col{overflow: hidden;zoom:1;}
+.x_shot,.x_tune{width: 130px;text-align: center;border:1px #205493 solid;float: left;cursor: pointer;padding: 2px 0;}
+.x_tune{border-left:none;}
+.x_stactive{background-color: #205493;color: #fff;}
+
+.x_reset_col{margin-left: 0;}
+.x_product_table thead{background-color: #f3f3f3;}
+.x_page{overflow: hidden;zoom:1;padding-top: 2px;height: 28px;}

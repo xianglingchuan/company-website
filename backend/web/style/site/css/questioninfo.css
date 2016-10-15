@@ -1,0 +1,68 @@
+.commonWidth{width: 1040px;}
+.big-carousel{min-width: 1040px;}
+.container{width: 1040px;}
+
+.resolved{float: left;width: 80px;background-color: #ff7916;color: #fff;padding: 2px 5px;border-radius: 4px;text-align: center;}
+.resolved-r{float: left;width: 610px;margin-left: 20px;}
+.text-answer{position: relative;overflow: hidden;zoom:1;margin-top: 40px;clear: both;}
+.text-answer ul{overflow: hidden;zoom:1;padding: 0;margin-bottom: 0;}
+.text-answer ul li{float: left;padding: 3px 20px;cursor: pointer;font-size: 16px;padding-bottom: 10px;}
+.text-answer ul li.active{color: #ff7916;border-bottom: 1px #ff7916 solid;}
+.text-answer textarea{width: 100%;padding: 10px;border:1px #e5e5e5 solid;min-height: 100px;}
+.submit-reply{background-color: #ff7916;color: #fff;text-align: center;padding: 3px 10px;border-radius: 4px;margin-top: 6px;border:1px #ff7916 solid;}
+.resolved-r h3{margin: 0;}
+.resolved-r >span{color: #999999;padding: 0 0 10px 0;display: block;}
+.raiders_left01{padding-top: 25px;}
+
+
+
+.ManagerList{position: relative;padding-top: 15px;padding-bottom: 15px;border-bottom: 1px #ccc dashed;min-height: 150px;}
+.ManagerList >img{position: absolute;left: 0;width: 70px;height: 70px;border-radius: 50%;}
+.ManagerListInfo{margin-left: 86px;}
+
+.answerlistTop{border-bottom: 1px #ccc solid;border-bottom: 1px #ccc solid;padding-bottom: 10px;font-size: 16px;}
+.answerlist{clear: both;margin-top: 30px;}
+
+
+.btn-see{background-color: #ccc;padding: 4px 20px;border-radius: 4px;color: #fff;cursor: pointer;}
+.ManagerListTitle b{font-size: 16px;margin-right: 10px;}
+.ManagerListTitle a{color: #000;font-size: 16px;}
+.ServiceQ{overflow: hidden;zoom:1;}
+.ServiceQ i{font-size: 14px;color: #000;font-style: normal;display: block;/*width: 390px;*/float: left;}
+.ServiceQ span{font-size: 14px;color: #000;float: right;}
+.ServiceQ{margin-top: 10px;margin-bottom: 10px;}
+.user{float: right;padding-left: 25px;background: url(../img/zan.png) no-repeat left center;line-height: 20px;cursor: pointer;color: #9c9c9c;}
+.user.active{background: url(../img/zan01.png) no-repeat left center;color: #ff7a18;}
+
+
+
+.answerlistTop span{color: #ff7916;}
+.ManagerListInfo >p{color: #ccc;margin-top: 5px;}
+
+
+
+.Strategy-Channel{overflow: hidden;zoom:1;}
+.Channel-List{background-color: #ff9900;color: #fff;margin-bottom: 10px;padding: 7px 0;cursor: pointer;}
+.Channel-List a{color: #fff;}
+.Channel-List:nth-child(odd){float: left;width: 45%;text-align: center;}
+.Channel-List:nth-child(even){float: right;width: 45%;text-align: center;}
+.WeHaveDo{padding: 0 10px;}
+.nch-module-filter dl dd.list ul li a.active{color: #ff9900;}
+
+
+.btn-default{background-color: #ff7916;color: #fff;border:1px #ff7916 solid;}
+.question-in{width: 300px;margin-top: 6px;}
+.question-input{width: 150px;}
+.f_search{padding: 5px 20px;border-radius: 4px;cursor: pointer;border: 1px #ff9900 solid;background-color: #ff9900;color: #fff;}
+.question-in *{display: inline-block;}
+.question-in span{color: #fff;}
+.top-nav{width: 790px;background-color: #ff7916;overflow: hidden;zoom:1;}
+.nav-list{background-color: transparent;}
+.commonWidth{margin-top: 10px;}
+
+.field-questionreplyform-verifycode{width: 300px;float: left;}
+.field-questionreplyform-verifycode .form-control{width: 100px;}
+
+.no-replay{padding: 20px 0;}
+
+

@@ -1,0 +1,525 @@
+.about-content {
+	width:100%;
+	overflow:hidden;
+	height:auto;
+	background-color:#f5f5f5;
+	padding-bottom:30px;
+	font-size:16px;
+	color:#595959
+}
+.f12 {
+	font-size:12px
+}
+.f14 {
+	font-size:14px
+}
+.f16 {
+	font-size:16px
+}
+.f20 {
+	font-size:20px
+}
+.f24 {
+	font-size:24px
+}
+.bold {
+	font-weight:700
+}
+.p20 {
+	padding:20px
+}
+.black {
+	color:#000
+}
+.iblock {
+	display:inline-block
+}
+.dn {
+	display:none
+}
+.tnBread {
+	font-size:14px
+}
+.grid_l {
+	width:190px;
+	margin-right:20px;
+	background-color:#fff
+}
+.grid_r {
+	width:970px;
+	background-color:#fff
+}
+.account-nav li a {
+	text-align:center;
+	height:48px;
+	line-height:48px;
+	color:#595959
+}
+.account-nav li .account-nav-item-link {
+	width:184px;
+	border-left:6px solid #fff;
+	display:block
+}
+.account-nav li .account-nav-item-link:hover {
+	box-shadow:1px 0px 5px rgba(0,0,0,0.2)
+}
+.account-nav li .account-nav-item-link:hover,.account-nav li .current {
+	border-left:6px solid #ff7916;
+	color:#ff7916
+}
+.account-nav-son {
+	background-color:#fafafa;
+	display:none
+}
+.account-nav-son li a {
+	display:block
+}
+.account-nav-son li a:hover,.account-nav-son li a.on {
+	color:#ff7916;
+}
+.account-nav-son li:hover {
+	background-color:#fff;
+	box-shadow:0px 0px 5px rgba(0,0,0,0.2)
+}
+.grid_r h4 {
+	overflow:hidden;
+	color:#333;
+	line-height:36px
+}
+.grid_r h4 span {
+	margin-right:8px
+}
+.grid_r h4 .dian {
+	color:#a6a6a6
+}
+.grid_r .profile-con {
+	line-height:36px
+}
+.grid_r .profile-con p {
+	text-indent:32px;
+	color:#595959
+}
+.grid_r .about_Box {
+	padding:35px
+}
+.grid_r .about_Box .fancy {
+	float:left;
+	width:900px
+}
+.grid_r .about_Box .fancy ul {
+	display:block;
+	float:left;
+	margin:0;
+	padding:0 0 20px;
+	text-align:center;
+	width:450px;
+	font-size:14px
+}
+.grid_r .about_Box .boder-gray {
+	border-bottom:1px solid #f2f2f2
+}
+.grid_r .about_Box .about_h1 {
+	font-size:24px
+}
+.grid_r .about_Box .relative {
+	position:relative
+}
+.grid_r .about_Box .absolute {
+	position:absolute
+}
+.grid_r .about_Box .one-intro span {
+	float:left
+}
+.grid_r .about_Box .one-intro span.left,.grid_r .about_Box .one-intro span.right {
+	width:22px;
+	height:19px;
+	background:url(../img/icon/one.png) no-repeat
+}
+.grid_r .about_Box .one-intro span.intro-txt {
+	width:846px;
+	padding:0 5px
+}
+.grid_r .about_Box .one-intro span.right {
+	background-position:0 -19px
+}
+.grid_r .about_Box .report-tab-container .news-list .boder-gray {
+	border-bottom:1px solid #f2f2f2
+}
+.grid_r .about_Box .report-tab-container .news-list .boder-gray .helpTitle {
+	width:895px;
+	text-align:left;
+	border-left:5px solid #cfcfcf;
+	height:40px;
+	line-height:40px;
+	vertical-align:middle;
+	text-indent:10px;
+	margin:0 0 1px
+}
+.grid_r .about_Box .report-tab-container .news-list .boder-gray .helpTitle .onename_sp {
+	display:inline-block;
+	text-align:left;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	width:760px;
+	margin:0;
+	padding:0
+}
+.grid_r .about_Box .report-tab-container .news-list .boder-gray .helpTitle:hover {
+	border-left:5px solid #3cb4f9;
+	color:#3cb4f9
+}
+.grid_r .about_Box .report-tab-container .news-list .boder-gray .riskCheck {
+	background:#f9f9f9;
+	border-left:5px solid #3cb4f9
+}
+.grid_r .about_Box .report-tab-container .news-list .boder-gray .date,.grid_r .about_Box .report-tab-container .news-list .boder-gray .date02 {
+	position:absolute;
+	right:15px;
+	top:10px;
+	color:#c3c3c3;
+	font-size:14px
+}
+.grid_r .about_Box .report-tab-container .news-list .boder-gray .w200 {
+	width:200px
+}
+.grid_r .about_Box .report-tab-container .news-list .boder-gray .w665 {
+	width:665px
+}
+.grid_r .about_Box .report-tab-container .news-list .boder-gray a.blue {
+	color:#39f
+}
+.grid_r .about_Box .report-tab-container .news-list .boder-gray .partner-txt {
+	margin-left:35px;
+	font-size:14px
+}
+.grid_r .about_Box .people-list {
+	width:260px;
+	float:left
+}
+.grid_r .about_Box .people-list .current,.grid_r .about_Box .people-list .people-list-item:hover {
+	background:#f7f7f7;
+	cursor:pointer
+}
+.grid_r .about_Box .people-list .people-list-item {
+	width:100%;
+	height:53px;
+	margin-bottom:7px
+}
+.grid_r .about_Box .people-list .people-list-item .people-list-item-img {
+	width:46px;
+	height:53px;
+	float:left
+}
+.grid_r .about_Box .people-list .people-list-item .people-list-item-title {
+	width:130px;
+	height:17px;
+	float:left;
+	padding:5px 0 0 10px
+}
+.grid_r .about_Box .people-list .people-list-item .blue {
+	color:#005ba6
+}
+.grid_r .about_Box .people-list .people-list-item .block {
+	color:#000
+}
+.grid_r .about_Box .people-txt {
+	width:600px;
+	float:left;
+	background:#f7f7f7;
+	padding:20px;
+	right:0
+}
+.grid_r .about_Box .people-txt .people-txt-item-img {
+	width:130px;
+	height:153px;
+	float:right;
+	margin-right:20px
+}
+.grid_r .about_Box .people-txt .people-txt-item-title {
+	width:390px;
+	height:22px;
+	float:left;
+	padding:7px 0 0 10px;
+	text-align:right
+}
+.grid_r .about_Box .people-txt .people-txt-item-title.w355 {
+	position:relative
+}
+.grid_r .about_Box .people-txt .people-txt-item-intro {
+	float:left
+}
+.grid_r .about_Box .people-txt .mt100 {
+	margin-top:100px
+}
+.grid_r .about_Box .people-txt .blue {
+	color:#177dcf !important
+}
+.grid_r .about_Box .report-pic {
+	display:block;
+	float:left;
+	width:900px;
+	height:160px;
+	margin-top:4px
+}
+.grid_r .about_Box .report-pic dl {
+	display:block;
+	float:left;
+	padding-left:116px;
+	width:332px;
+	height:160px
+}
+.grid_r .about_Box .report-pic dl .report-pic-title {
+	color:#36abf6;
+	display:block;
+	font-size:20px
+}
+.grid_r .about_Box .report-pic dl .fabud {
+	color:#fff;
+	display:block;
+	padding:4px 0;
+	margin:16px 0 10px;
+	background-color:#36abf6;
+	font-size:14px
+}
+.grid_r .about_Box .report-pic dl .white {
+	color:#fff
+}
+.grid_r .about_Box .report-pic dl .white .icon-blue-link {
+	padding:3px 20px;
+	border:none;
+	vertical-align:middle;
+	display:inline-block;
+	background:#39f;
+	color:#fff;
+	border-radius:3px;
+	cursor:pointer;
+	font-size:14px
+}
+.grid_r .about_Box .report-pic .yearReport01 {
+	margin-right:4px;
+	background:url(../img/pic/yeareport2015.jpg) no-repeat
+}
+.grid_r .about_Box .report-pic .yearReport02 {
+	margin-right:0;
+	background:url(../img/pic/2014_12th_small.jpg) no-repeat
+}
+.grid_r .about_Box .div_clb {
+	width:100%;
+	height:0;
+	clear:both
+}
+.grid_r .about_Box .report-list .report-tab {
+	border-bottom:5px solid #36abf6
+}
+.grid_r .about_Box .report-list .report-tab .report-tab-item-link.current,.grid_r .about_Box .report-list .report-tab report-tab-item-link:hover {
+	color:#fff;
+	background:#36abf6
+}
+.grid_r .about_Box .report-list .report-tab .report-tab-item-link {
+	padding:5px 20px 0;
+	color:#36abf6;
+	cursor:pointer;
+	float:left;
+	font-size:18px;
+	margin-right:10px
+}
+.grid_r .about_Box .showvideo {
+	width:674px;
+	float:left;
+	margin-right:26px
+}
+.grid_r .about_Box .showvideo dt {
+	width:674px;
+	font-size:18px;
+	font-weight:700;
+	color:#333;
+	height:30px;
+	line-height:30px;
+	vertical-align:middle
+}
+.grid_r .about_Box .showvideo dd {
+	width:674px
+}
+.grid_r .about_Box .showvideo dd.videoplay {
+	margin:10px 0
+}
+.grid_r .about_Box .showvideo .ti28 {
+	text-indent:28px
+}
+.grid_r .about_Box .videolistbox {
+	float:left;
+	width:210px;
+	height:562px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	margin-top:40px
+}
+.grid_r .about_Box .titleBack {
+	background:#ecf5fd;
+	border-bottom:1px solid #d0e8fd;
+	text-indent:10px;
+	color:#0168b7;
+	height:36px;
+	line-height:36px;
+	margin-bottom:10px
+}
+.grid_r .about_Box .tendercost {
+	width:100%;
+	border-collapse:collapse
+}
+.grid_r .about_Box .tendercost th {
+	background:#d9e2f3;
+	text-align:center;
+	border:1px solid #8eaadc;
+	height:48px;
+	font-size:14px;
+	line-height:48px;
+	vertical-align:middle
+}
+.grid_r .about_Box .tendercost td {
+	border:1px solid #8eaadc;
+	font-size:14px;
+	line-height:30px;
+	vertical-align:middle
+}
+.grid_r .about_Box .remark {
+	line-height:28px;
+	vertical-align:middle;
+	padding-bottom:20px;
+	font-size:14px
+}
+.grid_r .about_Box .recruitment-list-item .recruitment-title {
+	border-left:5px solid #2293ea;
+	text-indent:10px;
+	font-size:18px
+}
+.grid_r .about_Box .recruitment-list-item dl {
+	font-size:14px
+}
+.grid_r .about_Box .one-txt {
+	font-size:14px
+}
+.grid_r .about_Box .one-txt .h28 {
+	height:28px;
+	line-height:28px
+}
+.grid_r .about_Box .one-txt .contact-title {
+	border-bottom:1px solid #2d97c6;
+	color:#2d97c6
+}
+.grid_r .about_Box .one-txt .blue {
+	color:#005ba6
+}
+.grid_r .about_Box .one-txt a.blue {
+	color:#39f
+}
+.grid_r .about_Box .one-txt .headoffice {
+	width:100%;
+	float:left
+}
+.grid_r .about_Box .one-txt .headoffice dt {
+	display:block;
+	float:left;
+	width:100%;
+	font-size:16px;
+	font-weight:700;
+	margin-top:10px;
+	height:24px;
+	line-height:24px;
+	vertical-align:middle
+}
+.grid_r .about_Box .one-txt .yinyebu {
+	display:block;
+	float:left;
+	width:100%;
+	font-size:16px;
+	font-weight:700;
+	margin-top:10px;
+	height:24px;
+	line-height:24px;
+	vertical-align:middle
+}
+.grid_r .about_Box .one-txt .fengzhi {
+	display:block;
+	float:left;
+	margin:0;
+	width:100%
+}
+.grid_r .about_Box .one-txt .fengzhi li {
+	list-style:none;
+	float:left;
+	width:225px;
+	height:26px;
+	margin:4px 0;
+	line-height:26px;
+	vertical-align:middle
+}
+.grid_r .about_Box .one-txt .fengzhi li a {
+	display:inline-block;
+	height:26px;
+	padding:0 4px;
+	float:left
+}
+.grid_r .about_Box .one-txt .fengzhi li a.ahvp {
+	font-weight:700;
+	color:#047ACD
+}
+.grid_r .about_Box .one-txt .addressbox {
+	float:left;
+	width:100%;
+	padding:10px 0 20px 4px;
+	border-top:1px dashed #999
+}
+.grid_r .about_Box .one-txt .addressbox .add-ul {
+	float:left;
+	width:100%;
+	display:none
+}
+.grid_r .about_Box .one-txt .addressbox .add-ul li {
+	list-style:none;
+	width:100%;
+	font-size:14px;
+	line-height:24px;
+	height:24px;
+	vertical-align:middle
+}
+.grid_r .about_Box .one-txt .addressbox .add-ul li .add-sp01 {
+	display:block;
+	float:left;
+	width:700px
+}
+.grid_r .about_Box .one-txt .addressbox .add-ul li .add-sp02 {
+	display:block;
+	float:left;
+	width:200px
+}
+.grid_r .about_Box .one-txt .addressbox .add-ul .add-li02 {
+	margin-bottom:24px
+}
+.grid_r .about_Box .one-txt .addressbox .add-ul .add-li03 {
+	margin-bottom:6px
+}
+.page-one-main p {
+	line-height:28px;
+	text-indent:2em;
+	margin-bottom:10px
+}
+.contactTouNa {
+	width:102px;
+	height:30px;
+	text-align:right;
+	padding-right:18px;
+	line-height:30px;
+	margin-top:-2px;
+	background:url(../img/icon/icon-sprite-v2.png?v=111) 18px -1575px no-repeat;
+	background-color:#15b5f1;
+	color:#fff;
+	display:inline-block;
+	font-size:14px
+}
+.contactTouNa:hover {
+	background-color:#2691cf;
+	color:#fff
+}

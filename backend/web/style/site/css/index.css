@@ -1,0 +1,311 @@
+*{list-style: none;font-family: "Microsoft YaHei", "微软雅黑", "Tahoma", "Arial", "Helvetica", "STHeiti";;}
+html{height: 100%;background-color: #f3f3f3;}
+body{background-color: #f3f3f3;}
+.topnav{
+    background-color: #f3f3f3;padding: 3px 0;
+}
+.container{width: 1200px;}
+.commonWidth{width: 1200px;margin: 0 auto;overflow: hidden;zoom:1;margin-top: 20px;}
+.big-carousel{min-width: 1200px;}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{height: 400px;}
+.person_img{/*float: left!important;*/padding-left: 20px;background: url(../img/person02.png) no-repeat;background-size: 16px 16px;background-position: left center;font-size: 12px;color: #666;}
+.person_img.newpers{background: url(../img/person01.png) no-repeat;background-position: left center;background-size: 16px 16px;}
+@media (min-width: 1200px){
+.col-lg-8 {
+    width: 63%;
+}
+}
+@media (min-width: 992px){
+.col-md-8 {
+    width: 63%;
+}
+}
+@media (min-width: 768px){
+.col-sm-8 {
+    width: 63%;
+}
+}
+@media (min-width: 768px){
+.col-xs-8 {
+    width: 63%;
+}
+}
+
+
+.person_img:first-child{margin-right: 20px;}
+.person_img a{color: #666;}
+.person_img a.orange_a{color: #ff7916;margin-left: 5px;}
+.navbar{border-bottom: 1px #ccc solid;background-color: #fff;height: 60px;}
+.top_right{margin-bottom: 0;height:59px;}
+.top_right  li{display: inline-block;width: 13%;text-align: center;line-height: 58px;float: left;}
+.top_right_r{margin-top: 8px;padding-right: 0;float: right;}
+.top_right_r.top_right_r, .col-xs-6.top_right_r .col-sm-6.top_right_r, .col-md-6.top_right_r, .col-lg-6.top_right_r{float: right;}
+.top_right  li a{color: #666;font-family: "Microsoft YaHei";font-size: 20px; padding: 0;}
+.navbar-header:after{content: "";clear: both;}
+.navbar-nav{float: right;    padding-right: 0;}
+.navbar-nav >li{float: left;}
+.navbar-header{float: left;/*width: 142px;*/}
+.navbar-header a img{margin-top: 5px;height: 46px;}
+.x_acive{background-color: #ff7916;color: #fff;}
+.top_right .active{background-color: #ff7916;color: #fff;}
+.top_right  li.x_acive a{color: #fff;}
+.top_right .active a{color: #fff;}
+.top_right .active:hover {background-color: #ff7916;}
+.btn-default-xc{background-color: #ff7916;color: #fff;border:1px #ff7916 solid;border-radius: 0;border-top-right-radius: 4px;border-bottom-right-radius: 4px;}
+.xc-control{border-bottom-right-radius: 0;border-top-right-radius: 0;border:1px #ff7916 solid;}
+.login-person{background: url(../img/person.png) no-repeat;background-position: left center;padding-left: 20px;line-height: 49px;color: #666;}
+.navbar .container{/*padding-top: 5px;padding-bottom: 5px;*/}
+.carousel-control.right{background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-repeat: repeat-x;}
+.carousel-control.left {
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+.x_margin_left:hover{background-color: #ff7916;color: #fff;}
+.top_right li.x_margin_left:hover a {
+    color: #fff;
+}
+.xc_mm{border:1px red solid;}
+.pull-add .pull-left{background: url(../img/iconfont-remen.png) no-repeat left center;padding-left: 20px;color: #313131;}
+.pull-add .pull-right{color: #999;}
+.pull-add{margin-top: 15px;padding-left: 15px;padding-right: 15px;}
+.col_list img{margin-bottom: 5px;}
+.col_list h3{font-size: 14px;text-align: center;margin: 0;margin-top: 10px;}
+.col_list p{text-align: center;background-color: #ff7916;color: #fff;font-size: 12px;margin-top: 10px;padding: 2px 0;}
+.col_div{border-radius: 3px;border: 1px #a0a0a0 solid;color: #a0a0a0;padding-left: 3px;padding-right: 3px;}
+#carousel-example-generic .carousel-inner>.item{min-height: 400px;}
+
+
+.inner {width: 1200px;margin: 0 auto;}
+.inner {position: relative;z-index: 11;}
+.inner .slide-search {position: absolute;left: 50%;bottom: 45px;z-index: 999;margin-left: -350px;width: 700px;height: 125px;
+        background:url(../img/search_bg.png) no-repeat;
+        background-size:100% 100%;
+      -moz-background-size:100% 100%;
+      -webkit-background-size:100% 100%;
+      -o-background-size:100% 100%;border-radius: 4px;}
+.search-t {padding: 18px 30px;}
+.search-bot {padding: 0 30px;font-size: 14px;}
+.slide-search .form-group {margin-bottom: 0;}
+
+.search-t a{display: inline-block;padding-left: 30px;padding-right: 30px;background: url(../img/img.png) -4px -2px no-repeat;line-height: 22px;color: #fff;font-size: 16px;}
+.search-t a.checked {background: url(../img/img.png) -4px -28px no-repeat;}
+.search-t a:hover {background: url(../img/img.png) -4px -28px no-repeat;text-decoration: none;}
+.search-bot {padding: 0 30px;font-size: 14px;}
+.search-item {position: relative;float: left;margin-right: 15px;padding: 0;width: 110px;background: url(../images/ico/img.png) -864px -68px no-repeat #fff;border-radius: 3px;}
+.search-item select{width: 100%;line-height: 36px;height: 36px;border: none;font-size: 14px;color: #151618;padding: 0 10px 0 10px;background-color: #fff;}
+.search-item input {width: 100%;line-height: 36px;height: 36px;border: none;font-size: 14px;color: #151618;}
+input[readonly] {cursor: pointer;}
+
+.search-btn-area {float: right;}
+.search-btn {display: inline-block;background: #ff8d13;width: 120px;line-height: 36px;border-radius: 3px;text-align: center;color: #fff;transition: all .3s;}
+.hot_sear{clear: both;margin-left: 30px;color: #fff;padding: 5px 0;font-size: 12px;}
+.raiders_left{width: 510px;background-color: #fff;height: 390px;overflow: hidden;zoom:1;}
+.raiders_top{padding: 10px;border-bottom: 1px #e5e5e5 solid;margin-bottom: 15px;}
+.smart_slide{padding-left: 10px;padding-right: 60px;margin-bottom: 10px;}
+.smart_slide .carousel-indicators{bottom: 0px;}
+.raiders_top a{color: #999;}
+.example_a a{display: block;color: #333333;font-size: 16px;line-height: 20px;margin-bottom: 10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; -o-text-overflow:ellipsis;}
+.example_a{padding-left: 10px;padding-right: 10px;}
+.raiders_center{/*padding-left: 15px;*/width: 410px;height: 390px;overflow: hidden;zoom:1;background-color: #fff;}
+.raiders_center ul{width: 100%;border:1px #e7e7e7 solid;margin-bottom: 0; overflow: hidden;zoom:1;padding-left: 0;border-right: none;cursor: pointer;}
+.raiders_center ul li{width: 16.6666%;border-right: 1px #e7e7e7 solid;height: 40px;line-height: 40px;text-align: center;color: #666;background-color: #f3f3f3;}
+.raiders_center ul li.active{background-color: #ff7916;color: #fff;}
+.raiders_center_c{background-color: #fff;padding-top: 10px;padding-left: 10px;}
+.Elementli{padding: 0;padding-left: 15px;padding-right: 15px;padding-bottom: 10px;overflow: hidden;zoom: 1;margin-top: 10px;border-bottom: 1px #e5eaec solid;}
+.Elementli01{padding: 0;padding-left: 15px;margin-bottom: 25px;overflow: hidden;zoom:1;}
+.Elementli img{width: 60px;/*height: 60px;*/float: left;}
+.WeHaveDo .Elementli img{width: 40px;height: 40px;}
+.Elementli01 img{width: 55px;/*height: 55px;*/float: left;}
+.loan-item-title{float: left;display: block;/*width: 157px;*/margin-left: 7px;cursor: pointer;}
+.raiders_center .loan-item-title{width: 330px;margin-left: 7px;}
+.raiders_center .Elementli{padding-left: 0;}
+.Elementli01 .loan-item-title01{float: left;display: block;/*width: 157px;*/margin-left: 7px;}
+.loan-item-title a{display: block;color: #333;font-size: 16px;}
+.loan-item-title a:hover{text-decoration: underline;}
+.loan-item-title a:hover label{text-decoration: underline;}
+.loan-item-title01 a{display: block;color: #333;font-size: 16px; width: 120px; overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.loan-item-title span{font-style: normal;color: #ff7916;font-size: 24px;font-weight: bold;line-height: 15px;display: block;margin-top: 4px;    margin-left: 4px;font-family: Georgia, serif;}
+.raiders_center_c .loan-item-title span{font-style: normal;color: #ff7916;font-size: 14px;font-weight: normal;line-height: 15px;display: block;margin-top: 4px;    margin-left: 4px;font-family: "微软雅黑";}
+.loan-item-title span i{color: #333333;font-style: normal;font-size: 14px;font-weight: normal;}
+.raiders_center_c .loan-item-title span i{color: #333333;font-style: normal;font-size: 14px;font-weight: normal;}
+.loan-item-title01 span{font-style: normal;color: #ff7916;font-size: 14px;line-height: 15px;display: block;margin-top: 4px;}
+.raiders_right{width: 270px;background-color: #fff;border-top: 2px #ff7916 solid;padding-left: 10px;padding-right: 10px;}
+.raiders_right span{height: 40px;line-height: 40px;font-weight: bold;}
+.raiders_right .btn{width: 100%;}
+.wechatcode{margin-left: -10px;margin-right: -10px;padding-left: 10px;padding-right: 10px;background-color: #f5580b;overflow: hidden;zoom:1;padding-top: 10px;padding-bottom: 10px;margin-top: 24px;}
+.wechatcode p{font-size: 12px;color: #fff;margin-top: 13px;}
+.wechatcode img{ width:58px; height: 58px;}
+
+.role_com{margin-left: -31px;}
+.roleList{width: 215px;background-color: #fff;border-radius: 4px;float: left;display: block;overflow: hidden;zoom: 1;padding: 15px 20px;margin-left: 31px;}
+.roleList01{background-color: #ffc057;}
+.roleList02{background-color: #ffa257;}
+.roleList03{background-color: #ff8a57;}
+.roleList04{background-color: #f86a49;}
+.roleList05{background-color: #fa655d;}
+.TopList{padding-top: 5px;}
+.TopList span{color: #fff;font-size: 16px;}
+.TopList p{font-size: 12px;color: #fff600;}
+.role_content{margin-top: 20px;clear: both;}
+.roleList img{width: 60px;}
+.HotCredit{overflow: hidden;zoom:1;margin-top: 20px;}
+.HotCreditPro{background-color: #fff;width: 920px;border-top: 2px #ff7916 solid;height: 393px;}
+.WeHaveDo{width: 270px;background-color: #fff;border-top: 2px #ff7916 solid;/*min-height: 393px;*/}
+.HotCredit.commonWidth .WeHaveDo{min-height: 393px;}
+.HotCreditPro .row{margin-left: 0;margin-right: 0;}
+
+/*横切三*/
+.wrap{margin-top: 10px;}
+.wrap-con{margin-top: 10px;}
+.con_l{background-color: #fff;width: 410px;height: 371px;}
+.con_r{background-color: #fff;width: 336px;height: 371px;}
+.con_c{background-color: #fff;width: 424px;height: 371px;}
+.con_l,.con_c{float: left;margin-right: 15px;}
+.con_l{margin-right: 15px;}
+.con_r{float: right;}
+.con_l{float: left;width: 410px;padding-left: 10px;}
+.con-search {}
+.con-search-input {float: left;}
+.con-search-input input {width: 180px;padding: 0 15px;border-radius: 3px;height: 34px;line-height: 1;background-color: #fff;border: 1px solid #e5eaec;}
+.con-search-btn {float: right;}
+.con-search-btn a {display: inline-block;line-height: 34px;width: 60px;color: #fff;text-align: center;border-radius: 3px;}
+.con-search-btn .btn-search {background: #ff7916;}
+.con-search-btn .btn-ask {margin-left: 5px;background: #ff7916;}
+.con_c ul{padding: 10px;overflow: hidden;zoom:1;padding-top: 0;padding-bottom: 0;margin-bottom: 0px;}
+.con_l_a{padding-top: 10px;padding-bottom: 10px;}
+.con_l_a a{display: block;color: #333;font-size: 14px;line-height: 20px;margin-bottom: 10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; -o-text-overflow:ellipsis;}
+.img_r_g{width: 64px;height: 64px;}
+.con_c .img_r{margin-left: 10px;width: 107px;overflow: hidden;}
+.con_c .img_r a{color: #333;
+font-weight: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;}
+.con_c .img_r a span{color: #999;display: block;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;}
+.img_r p{    font-size: 12px;margin-top: 3px;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;}
+
+
+.success_case{padding-left: 10px;padding-right: 10px;}
+.suc_list{overflow: hidden;zoom:1;margin-bottom: 0px;}
+.suc_list span{display: block;width: 57px;text-indent: 3px;background-image: url("../img/index_i.png");background-repeat: no-repeat;background-position:  center right;color: #fff;height: 32px;line-height: 32px;}
+.suc_list_c a{font-size: 16px;color: #ff7916;}
+.suc_list_c p{font-weight: normal;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;color: #999;font-size: 14px;height: 18px;line-height: 18px; }
+.suc_list i{font-style: normal;font-size: 12px;}
+.suc_list_c{width: 300px;margin-left: 10px;}
+.logo_list{padding-left: 10px;padding-right: 10px;}
+.logo_list a img{width: 149px;margin-bottom: 10px;border:1px #ccc solid;height: 41px;}
+.logo_list a:nth-child(odd) img{float: left;}
+.logo_list a:nth-child(even) img{float: right;}
+
+.risk_level{margin-top: 10px;}
+.navbar{margin-bottom: 0;}
+.raiders_top span{font-size: 16px;border-left:4px #ff8118 solid;padding-left: 10px;line-height: 18px;display: inline-block;font-weight: bold;}
+.co_bg{background-color: #fff;margin-top: 20px;padding-bottom: 15px;}
+.search-btn:focus{background-color: #ff6316;color: #fff;}
+.search-btn:hover{background-color: #ff6316;color: #fff;}
+.btn-default:hover{background-color: #ff6316;color: #fff;border:1px #ff6316 solid;}
+.btn-search:hover{background-color: #ff6316;color: #fff;}
+.btn-ask:hover{background-color: #ff6316;color: #fff;}
+
+/*页脚*/
+.footer{padding-top: 20px;padding-bottom: 20px;}
+.footer ul{margin: 0;padding: 0;}
+.footer_ul{overflow: hidden;zoom:1;text-align: center;}
+.footer_ul li{padding: 2px 3px;border: 1px #bbbbbb solid;color: #bbbbbb;margin-right: 15px;cursor: pointer;width: 64px;display: inline-block;}
+.footer_ul li.active{border-color: #999999;color: #999999;background-color: #fff}
+.color_row li a{color: #999;}
+.footer ul.color_row{margin-top: 20px;padding-bottom: 10px;border-bottom: 1px #e0e0e0 solid;}
+.footer ul.color_row li{margin-bottom: 5px;}
+.footer_bottom{overflow: hidden;zoom:1;margin-top: 20px;margin-bottom: 10px;text-align: center;}
+.footer_bottom span{margin-left: 10px;margin-right: 10px;color: #dad2cc;}
+.footer_bottom a{color: #000;}
+.footer .commonWidth>p{color: #999;margin-bottom: 10px;text-align: center;}
+
+/*页脚 end*/
+
+.model-body-label >div> label{margin: 0 auto;text-align: center;margin-top: 5px;display: inline-block;width: 84px;text-align: right;font-weight: bold;}
+.model-body-label label span{display: inline-block;width: 104px;text-align: right;}
+.modal-header{text-align: center;}
+.model-body-label{width: 390px;margin: 0 auto 20px auto;margin-top: 25px;}
+#productquestion-content{width: 300px;}
+.modal-footer{border-top: none;padding-top: 0;}
+.footer-btn{text-align: center;margin-bottom: 25px;margin-top: -20px;}
+.row-btn-default{background-color: #ff7916;border:1px #ff7916 solid;color: #fff;display: inline-block;padding: 6px 12px;margin-bottom: 0;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;background-image: none;border: 1px solid transparent;border-radius: 4px;height: 42px;border-radius: 0;margin-right: 10px;}
+.row-btn-default:hover{background-color: #ff6316;border:1px #ff6316 solid;color: #fff;}
+.modal-footer{text-align: center;padding-bottom: 25px;}
+#applyloanform-is_business_license,#applyloanform-company_trade,#applyloanform-company_type,.model-body-label input[type=text]{display: block;background: #fff;line-height: 40px;height: 42px; padding-left: 10px;color: #666;overflow: hidden;zoom: 1;border-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 0;border:1px #ccc solid;margin-left: 35px;}
+.model-body-label i{font-style: normal;margin-left: 2px;margin-right: 2px;}
+.year,.moth{width: 61px;}
+.code{width: 70px;}
+.modal-body p{text-align: center;    margin-bottom: 6px;}
+.modal-p-top{margin-top: 70px;}
+.modal-body{min-height: 200px;padding-bottom: 0;}
+.modal-dialog{width: 600px;}
+#applyloanform-is_marriage .radio,#applyloanform-nssf .radio,#applyloanform-cpf .radio{display: inline-block;margin: 0;}
+#applyloanform-company_loan_success .radio,#applyloanform-company_debt .radio,#applyloanform-nssf .radio,#applyloanform-cpf .radio{display: inline-block;margin: 0;}
+
+#applyloanform-is_marriage label,#applyloanform-company_loan_success label,#applyloanform-cpf label{text-align: center;}
+.field-applyloanform-cpf,.field-applyloanform-nssf{margin-bottom: 0;}
+#applyloanform-credit_status,#applyloanform-car_status,#applyloanform-house_status,#applyloanform-work_status,#applyloanform-salary_put_form,#applyloanform-work_age,#applyloanform-salary_put_form,#applyloanform-work_status,#applyloanform-use{    display: inline-block;background: #fff;line-height: 40px;height: 42px;padding-left: 10px;color: #666;overflow: hidden;zoom: 1;border-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 0;border:1px #ccc solid;margin-left: 35px;width: 266px;}
+#applyloanform-work_age{width: 266px;}
+#applyloanform-work_age,#applyloanform-salary_put_form,#applyloanform-work_status,#applyloanform-cpf,#applyloanform-house_status,#applyloanform-car_status,#applyloanform-credit_status,#applyloanform-is_marriage{margin-left: 35px;}
+#applyloanform-cpf{margin-left: 35px;}
+#applyloanform-nssf{margin-left: 35px;}
+.field-applyloanform-house_status,.field-applyloanform-car_status,.field-applyloanform-credit_status,.field-applyloanform-is_marriage{width: 390px;margin: 0 auto;}
+
+
+
+.new-slide img{float: left;}
+.new-slide .info-describe{float: right;width: 140px;padding: 0 15px;background-color: #f1f1f1;height: 150px;}
+
+.info-describe a h4{font-size: 14px;text-overflow: ellipsis;height: 30px;line-height: 15px;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;}
+.describe-t{color: #333333;}
+.describe-t:hover{color: #333333;}
+.info-describe a p{font-size: 12px;text-overflow: ellipsis;height: 60px;line-height: 15px;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;}
+.describe-p{color: #999999;}
+.describe-p:hover{color: #999999;}
+.new-carousel .carousel-indicators{left: 80%;} 
+
+.top_right .active:hover{background-color: #ff7916;}
+.top_right .active:hover a{background-color: #ff7916;}
+
+.loan-item-title label{margin-bottom: 0;}
+
+.risk_level .pull-left img{width: 848px;}
+.risk_level .pull-right img{width: 337px;}
+
+
+
+.con_c ul li{overflow: hidden;zoom:1;margin-bottom: 10px;float: left;width: 45%;}
+
+.cooperation-img img{    height: 56px;margin-left: 20px;margin-bottom: 10px;width: 170px;border:1px #e5e5e5 solid;}
+.cooperation-img{padding: 10px;}
+
+
+#applyloanform-loan_limit,#applyloanform-loan_amount{display: block;background: #fff;line-height: 40px;height: 42px;width: 197px;padding-left: 10px;color: #666;overflow: hidden;float: left;zoom: 1;border-radius: 0;border-top-right-radius: 0;border-bottom-right-radius: 0;border:1px #ccc solid;}
+.field-applyloanform-loan_amount span{background: #fbfbfb;border: 1px solid #ccc;border-left: none;color: #666;display: inline-block;font-size: 14px;height: 42px;line-height: 42px;text-align: center;width: 42px;}
+.input-info{display: inline-block;}
+#applyloanform-arpu{float: left;}
+.field-applyloanform-income_public span,.field-applyloanform-income_month span,.field-applyloanform-arpu span,.field-applyloanform-loan_limit span{background: #fbfbfb;border: 1px solid #ccc;border-left: none;color: #666;display: inline-block;font-size: 14px;height: 42px;line-height: 42px;text-align: center;width: 42px;}
+#applyloanform-sms_code{float: left;}
+
+#loan_first .modal-title{text-align: left;}
+.modal-title{text-align: left;}
+.modal-body >h1{text-align: center;padding: 20px 0;font-size: 24px;line-height: 30px;color: #666;margin: 0;padding-top: 10px;}
+.info-tip{display: block;width: 490px;text-align: center;line-height: 20px;border-image-source: initial;border-image-slice: initial;border-image-width: initial;border-image-outset: initial;border-image-repeat: initial;font-family: 宋体;font-size: 12px;color: rgb(153, 153, 153);margin: 20px auto;padding: 10px 15px;border-width: 1px;border-style: solid;border-color: rgb(242, 242, 242);background: rgb(251, 251, 251);}
+#productquestion-phone,#productquestion-callname{border-radius: 4px;margin-left: 0;}
+#applyloanform-company_debt{margin-left: 35px;}
+#applyloanform-company_loan_success{margin-left: 35px;}
+#applyloanform-nssf .radio:last-child,#applyloanform-cpf .radio:last-child,#applyloanform-nssf span,#applyloanform-cpf span,#applyloanform-is_marriage .radio:last-child,#applyloanform-company_loan_success .radio:last-child,#applyloanform-company_debt .radio:last-child{margin-left: 25px;}
+.next-class .control-label{width: 112px;}

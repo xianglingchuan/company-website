@@ -1,0 +1,24 @@
+
+
+.x_section{/*height: 380px;*/width: 100%;background: url(../img/index/tru1e.png) no-repeat center center;background-size: 100% 100%;padding-top: 10px;padding-bottom: 10px;margin-top: 10px;}
+.x_section_con{width: 975px;margin: 0 auto;background-color: #fff;padding: 20px 25px;padding-right: 0;}
+.x_section_con_left{float: left;width: 200px;height: 200px;}
+.x_section_con_r{float: left;margin-left: 20px;width: 715px;}
+.x_section_name,.x_section_pay{font-size: 14px;color: #707070;margin-top: 2px;}
+.x_br{border-bottom: 1px #bccbde dashed;width: 100%;margin-top: 25px;margin-bottom: 5px;}
+.x_edit{display: inline-block;background-color: #205493;border-radius: 3px;color: #fff;font-size: 12px;padding: 1px 6px;margin-left: 10px;cursor: pointer;}
+.x_edit{display: inline;}
+
+/*x_second_con*/
+.x_second{width: 100%;background-color: #f2f2f2;height: 100%;}
+.x_second_con{    width: 1000px;margin: 0 auto;background-color: #fff;padding-left: 25px;padding-top: 10px;box-sizing: border-box;padding-bottom: 20px;}
+.x_second_con h2{background: url(../img/index/iconfont-chanpinjianyi.png) no-repeat;padding-left: 40px;background-size: 26px;font-size: 16px;font-weight: normal;color: #2e5d95;line-height: 30px;}
+.x_second_list h3{float: left;padding-left: 40px;background: url(../img/index/iconfont-dianpu.png) no-repeat;background-size: 31px 24px;margin-right: 30px;line-height: 42px;background-position: left center;font-weight: normal;font-size: 16px;}
+.x_first_show h3{background: url(../img/index/iconfont-fabufabu00.png) no-repeat;background-position: left center;}
+.x_second_list{text-align: center;margin-left: 38px;border-top: 1px #cccccc dashed;padding: 15px 0;}
+.x_btn{float: right;color: #fff;background-color: #205493;margin-right: 30px;border-radius: 4px;padding: 2px 20px;cursor: pointer;}
+.x_second_perfect{text-align: left;display: block;float: left;width: 550px;}
+.x_second_perfect b{display: block;font-weight: normal;font-size: 14px;}
+.x_second_perfect b i{color: #205493;}
+
+.x_has_btn{float: right;color: #205493;padding-right: 15px;width: 74px;text-align: center; margin-right: 37px;cursor: pointer; background: url(../img/index/iconfont-checkoutline01.png) no-repeat;background-position: 58px center;}

@@ -1,0 +1,80 @@
+body{background-color: #f1f1f1;}
+li{padding-left: 0;margin-left: 0;}
+
+a{cursor: pointer;}
+
+
+.x_section_title{font-size: 16px;color: #32639c;font-weight: bold;margin-top: 10px;margin-bottom: 20px;}
+.x_section_con{width: 100%;clear: both;}
+.x_section_con01{text-align: center;border-right: 1px #205493 solid;border-top: 1px #205493 solid;border-bottom: 1px #205493 solid;padding: 5px 0;cursor: pointer;}
+.x_section_con01:first-child{border-left: 1px #205493 solid;}
+.x_con_active{background-color: #205493;font-size: 14px;color: #fff;}
+.x_con_second{margin-left: -15px;margin-right: -15px;border:1px #205493 solid;padding-bottom:15px;}
+.x_con_second_01{overflow: hidden;zoom:1;padding: 10px;border-bottom: 1px #cccccc dashed;}
+.x_clear_tip{margin: 0 auto;border: 1px #205493 solid;padding: 3px 8px;border-radius: 4px;text-align: center;color: #fff;background-color: #205493;cursor: pointer;float: right;}
+.x_clear_tip a{color: #fff;}
+.x_clear_tip:hover{background-color: #2b6fc2;}
+/*.x_clear_tip:hover{background-color: #205493;color: #fff;}*/
+.x_clear_tip:hover a{color: #fff;}
+.x_con_second_01 i{color: #999;margin-right: 10px;}
+.x_con_second_01 i a{color: #999;}
+.x_con_second_01 i.x_screen_active a{color: #205493;}
+.x_con_second_02{overflow: hidden;zoom:1;padding: 10px;}
+.x_con_active a{color: #fff;}
+.x_section_con01 a{display: block;}
+.x_con_second_01 span,.x_con_second_01 i{margin-top: 4px;display: inline-block;}
+
+.x_order_num{/*margin-top: 15px;*/clear: both;padding-top: 10px;}
+.x_con_second_02 >span{float: left;    margin-top: 6px;}
+.x_con_apply{float: left;width: 100%;}
+.x_con_apply > span{float: left;margin-top: 8px;margin-right: 5px;}
+.x_order_num span{margin-right: 3px;}
+.x_btn_select{margin: 0 auto;border:1px #205493 solid;padding: 3px 8px;width: 70px;border-radius: 4px;margin-top:4px;text-align: center;color: #205493;cursor: pointer;background-color: #fff;}
+.x_btn_select:hover{color: #fff;background-color: #205493;}
+
+.x_add_share_cus {float: right;border-radius: 4px;background-color: #efa517;color: #fff;font-size: 14px;padding: 4px 8px;position: relative;cursor: pointer;margin-top: 20px;margin-bottom: 6px;}
+.x_edit_pro, .x_delete_pro, .x_delete_extension {display: inline;cursor: pointer;border: 1px #205493 solid;border-radius: 3px;font-size: 12px;color: #205493;padding: 0 3px;}
+.x_edit_pro:hover, .x_delete_pro:hover, .x_delete_extension:hover{background-color: #205493;color: #fff;}
+#w2{margin-top: 20px;}
+.x_cus_table{margin-top: 10px;}
+.x_cus_table td{text-align: center;}
+.x_cus_table th{text-align: center;}
+
+#start_time-datetime {width: 200px;display: inline-table;margin-right: 10px;}
+#end_time-datetime {width: 200px;display: inline-table;}
+/*.x_con_apply .x-time{float: left;}*/
+.x-time >span{float: left;margin-top: 7px;margin-right: 4px;}
+.product-name{margin-top: 8px;display: block;/*clear: both;*/float: left;/*width: 100%;*/margin-bottom: 10px;}
+.form-control{width: auto;display: inline-block;}
+
+
+
+.x_section_all .x_section_left li > a{padding: 0;color: #000;}
+.x_section_all .x_section_left li.active > a{padding: 0;color: #fff;}
+.x_section_all .x_section_left li.active{background-color: #205493;border:1px #205493 solid;}
+
+.x_section_all  li > a{padding: 0;color: #000;}
+.x_section_all  li.active > a{padding: 0;color: #fff;}
+.x_section_all  li:nth-child(1){background-image: url(../img/key04.png);background-repeat: no-repeat;background-position: 16px center;background-size: 19px;}
+.x_section_all  li.active:nth-child(1){background-image: url(../img/key03.png);background-repeat: no-repeat;background-position: 16px  center;background-size: 19px;}
+
+.x_section_left li:nth-child(2){background-image: url(../img/key05.png);background-repeat: no-repeat;background-position: 16px center;background-size: 19px;}
+.x_section_left li.active:nth-child(2){background-image: url(../img/key06.png);background-repeat: no-repeat;background-position: 16px center;background-size: 19px;}
+
+
+.x_select {
+    background-color: #205493;
+    border: 1px #205493 solid;
+    color: #fff;
+    padding: 1px 4px;
+    text-align: center;
+    width: 50px;
+    border-radius: 4px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.x_select:hover{background-color: #2b6fc2;}
+button.x_select {
+    line-height: 24px;
+    padding: 0;
+}

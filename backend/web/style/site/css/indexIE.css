@@ -1,0 +1,5 @@
+.inner .slide-search {
+	background:none;
+  	background-size: cover;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='file:///WWW/jurongyi/frontend/web/site/img/search_bg.png',  sizingMethod='scale');
+}

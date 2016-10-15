@@ -1,0 +1,37 @@
+.x_section_title { font-size: 16px;font-weight: bold;color: #32639c;margin-top: 15px;text-align: left;}
+.x_reset_col{overflow: hidden;zoom:1;}
+.x_touch,.x_shot,.x_tune{width: 130px;text-align: center;border:1px #205493 solid;float: left;cursor: pointer;padding: 2px 0;}
+.x_tune{border-left:none;border-left: 1px #369 solid;}
+.x_stactive{background-color: #205493;color: #fff;}
+.x_stactive a{color: #fff;}
+
+.x_reset_col{margin-left: 0;margin-top: 10px;    margin-bottom: 10px;}
+.x_product_table thead{background-color: #f3f3f3;}
+.x_page{overflow: hidden;zoom:1;padding-top: 2px;height: 28px;}
+.x_form_group{width: 100%;}
+.x_form_group label{display: inline;}
+.x_form_group .form-group{margin-top: 15px;padding: 6px;border:1px #ccc solid;}
+
+.x_form_group .form-control{width: 179px;display: inline;}
+
+.x_section_all .x_section_left li > a{padding: 0;color: #000;}
+.x_section_all .x_section_left li.active > a{padding: 0;color: #fff;}
+
+.table-bordered a{cursor: pointer;}
+
+.x_select{background-color: #205493;border:1px #205493 solid; color: #fff;padding: 1px 4px;text-align: center;width: 50px;border-radius: 4px;margin: 0 auto;cursor: pointer;}
+.x_select:hover{background-color: #2b6fc2;}
+
+.x_section_all  li > a{color: #000;}
+.x_section_all  li.active > a{color: #fff;}
+.x_section_all  li:nth-child(1){background-image: url(../img/key10.png);background-repeat: no-repeat;background-position: 20px center;}
+.x_section_all  li.active:nth-child(1){background-image: url(../img/key09.png);background-repeat: no-repeat;background-position: 20px center;}
+.x_section_left li.active{background-color: #205493;border:1px #205493 solid;}
+.x_section_left li:nth-child(2){background-image: url(../img/key11.png);background-repeat: no-repeat;background-position: 20px center;}
+.x_section_left li:nth-child(3){background-image: url(../img/key13.png);background-repeat: no-repeat;background-position: 20px center;}
+.x_section_left li.active:nth-child(3){background-image: url(../img/key14.png);background-repeat: no-repeat;background-position: 20px center;}
+.x_section_left li:nth-child(4){background-image: url(../img/key15.png);background-repeat: no-repeat;background-position: 20px center;}
+.x_section_left li.active:nth-child(4){background-image: url(../img/key16.png);background-repeat: no-repeat;background-position: 20px center;}
+.x_section_left li:nth-child(5){background-image: url(../img/key17.png);background-repeat: no-repeat;background-position: 20px center;}
+.x_section_left li.active:nth-child(5){background-image: url(../img/key18.png);background-repeat: no-repeat;background-position: 20px center;}
+
