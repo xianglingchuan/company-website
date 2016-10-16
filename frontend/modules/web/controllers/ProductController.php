@@ -2,6 +2,8 @@
 namespace frontend\modules\web\controllers;
 use Yii;
 use yii\web\Controller;
+use frontend\modules\web\models\SystemProductWeb;
+use frontend\modules\web\models\SystemCategoryWeb;
 
 /**
  * 产品控制器
@@ -24,7 +26,19 @@ class ProductController extends Controller
      */
     public function actionIndex()
     {
-         return $this->render("index");
+        $categoryId = Yii::$app->request->get('category_id');
+        $categoryInfo = "";
+        if(intval($categoryId)>=1){
+            $SystemCategoryWeb = new SystemCategoryWeb();
+            $categoryInfo = $SystemCategoryWeb->getInfo($categoryId);  
+        }
+        //获取新闻列表
+        $model = new SystemProductWeb();
+        $list = $model->getList($categoryId);
+        return $this->render("index",[
+            "categoryInfo"=>$categoryInfo,
+            "list" => $list,
+        ]);
          
     }
     
@@ -35,7 +49,25 @@ class ProductController extends Controller
      * @return    void
      */
     public function actionView(){
-        return $this->render("view");
+        $id = Yii::$app->request->get('id');
+        $model = new SystemProductWeb();
+        $info = $categoryInfo = $nextInfo = $lastInfo = "";
+        if(intval($id)>=1){
+            $info = $model->getInfo($id); 
+            if(!empty($info)){
+                $SystemCategoryWeb = new SystemCategoryWeb();
+                $categoryInfo = $SystemCategoryWeb->getInfo($info->category_id);                  
+            }
+            $nextInfo = $model->getNextArticle($info->id, $info->category_id);
+            $lastInfo = $model->getLastArticle($info->id, $info->category_id);
+        }
+        return $this->render("view",[
+            'model'=>$model,
+            "info"=>$info,
+            "categoryInfo"=>$categoryInfo,
+            "lastInfo" => $lastInfo,
+            "nextInfo" =>$nextInfo,
+        ]);
     }
     
     

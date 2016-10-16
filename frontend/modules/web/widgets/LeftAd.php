@@ -12,23 +12,15 @@ use frontend\modules\web\models\SettingWeb;
  * @date        2016-05-27
  * @copyright   2016 PRG
  */
-class TopLogo extends \yii\bootstrap\Widget
+class LeftAd extends \yii\bootstrap\Widget
 {
 
     public function run()
     {
         //读取顶部的logo图片
         $model = new SettingWeb();
-        $list = $model->getSiteBasic();
-        $viewData = [];
-        if(!empty($list)){
-            foreach($list as $buf){
-                $viewData[$buf['code']] = $buf['value'];
-            }
-        }
-        return $this->render('topLogo', [
+        return $this->render('leftAd', [
             "model"=>$model,
-            "viewData" => $viewData,
         ]);
     }
 }

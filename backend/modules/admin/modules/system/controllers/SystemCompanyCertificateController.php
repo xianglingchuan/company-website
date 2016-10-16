@@ -60,6 +60,7 @@ class SystemCompanyCertificateController extends Controller
         $model = new SettingBackend();
         $info = $model->getCompanyCertificate();
         $content = !empty($info) && isset($info['value']) ? $info['value'] : "";
+        $content = CommonHelp::replaceContentImgUrl($content);
         echo $this->render('view', [
             'model' => $model,
             'master_navigation_id' =>$this->master_navigation_id,
@@ -80,12 +81,16 @@ class SystemCompanyCertificateController extends Controller
         $content = !empty($info) && isset($info['value']) ? $info['value'] : "";
         if(Yii::$app->request->post()){
             $content = Yii::$app->request->post('content');
+            $content = CommonHelp::saveSummernoteImgs($content);            
             $result = $model->updateCompanyCertificate($content);
             if(!$result){
                 Yii::$app->getSession()->setFlash('error', "操作失败!"); 
             }else{
                 Yii::$app->getSession()->setFlash('success', '操作成功!');
             }
+        }
+        if(isset($content) && !empty($content)){
+            $content = CommonHelp::replaceContentImgUrl($content);
         }
         echo $this->render('create', [
             'model' => $model,

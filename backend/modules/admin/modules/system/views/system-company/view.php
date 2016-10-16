@@ -35,7 +35,7 @@ $this->registerCssFile(yii\helpers\Url::to('/style/css/my_shop.css'), ['depends'
                     [
                         'label' => $model->myLabels('companyContent'),
                         'format' => ['raw'],
-                        'value' => $viewData['companyContent'],
+                        'value' => $content = CommonHelp::replaceContentImgUrl($viewData['companyContent']),
                     ],
                 ],
             ])

@@ -30,6 +30,14 @@ class Setting extends \yii\db\ActiveRecord
         return '{{%setting}}';
     }
 
+    
+    public $ABOUT_ID = 41;
+    public $COMPANY_CERTIFICATE_ID = 51;
+    public $CONTACT_ID = 61;
+    public $SITE_BASIC_ID = 11;
+    
+    
+    
     /**
      * @inheritdoc
      */
@@ -108,6 +116,60 @@ class Setting extends \yii\db\ActiveRecord
     public function getDefaultCoverPath(){
         return Yii::$app->request->hostInfo."/img/default/system_gift_cover.jpg";
     }   
+    
+    
+    /**
+     * 获取公司简介信息
+     *
+     * @return array
+     */
+    public function getCompany() {
+        $list = $this::find()->select("id, parent_id, code, type, value")->where("parent_id=" . $this->ABOUT_ID)->asArray()->all();
+        return $list;
+    }
+
+    
+    
+    /**
+     * 获取企业资质
+     *
+     * @return array
+     */
+    public function getCompanyCertificate() {
+        $info = $this::find()->select("id, parent_id, code, type, value")->where("id=" . $this->COMPANY_CERTIFICATE_ID)->asArray()->one();
+        return $info;
+    }
+
+    
+    
+    /**
+     * 获取联系方式
+     *
+     * @return array
+     */
+    public function getContact(){
+        $list = $this::find()->select("id, parent_id, code, type, value")->where("parent_id=" . $this->CONTACT_ID)->asArray()->all();
+        $viewData = [];
+        if(!empty($list)){
+            foreach($list as $buf){
+                $viewData[$buf['code']] = $buf['value'];
+            }
+        }
+        return $viewData;
+    }
+    
+    
+    /**
+     * 获取网站基本信息
+     *
+     * @return array
+     */
+    public function getSiteBasic(){
+        $list = $this::find()->select("id, parent_id, code, type, value")->where("parent_id=" . $this->SITE_BASIC_ID)->asArray()->all();
+        return $list;  
+    }
+    
+    
     
     
 }

@@ -1,6 +1,6 @@
 <!--begin 顶部信息--> 
 <div id="header">
-   <?= frontend\modules\web\widgets\TopLog::widget(); ?>
+   <?= frontend\modules\web\widgets\TopLogo::widget(); ?>
    <?= frontend\modules\web\widgets\TopNavigation::widget(); ?>
    <?= frontend\modules\web\widgets\TopBanner::widget(); ?>
 </div>
@@ -12,16 +12,14 @@
     <div class="container">
         <div class="w1 xq_plan1">
             <div class="left_menu">
-                <div class="left_menu_t">
+                <div class="left_menu_t" style="height:113px;">
                     <h5>企业资质</h5>
                     <span>Enterprise qualification</span>
                 </div>
                 <ul>
-                    <li class="dqlm"><span class="sj1"></span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=7">企业资质</a></li></ul>
-                <div id="menu2" class="zfd" style="position: static; top: 184px;">
-                    <div class="zbwx"><p><img src="style/img/ewm.jpg"></p><span>扫一扫，咨询我们</span></div>
-                    <div class="zblx"><img src="style/img/dianh.jpg"></div>
-                </div>
+                    <li class="dqlm"><span class="sj1"></span><a href="">企业资质</a></li>
+                </ul>
+                <?= frontend\modules\web\widgets\LeftAd::widget(); ?>
             </div>
             <script>
                 var subnavT = $(".zfd").offset().top;
@@ -44,9 +42,13 @@
             <div class="fr xq_plan1_nr" id="dwei">
                 <div class="wz">
                     <span>企业资质</span>
-                    <div class="fr">您现在所在的位置：<a href="http://www.bjhtrc.com/">首页</a> &gt; <a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=7">企业资质</a></div>
+                    <div class="fr">您现在所在的位置：<a href="/web/index/index">首页</a> &gt; <a href="/web/index/company-certificate">企业资质</a></div>
                 </div>
-                <div class="article" style="border-bottom:none;"><div style="text-align: center;"><img src="style/img/20160624045552735.jpg"></div>
+                <div class="article" style="border-bottom:none;"><div style="text-align: center;">
+                        
+                        <?php echo frontend\helpers\CommonHelp::replaceImgUrl(Yii::$app->setting->get('companyCertificate')); ?>
+                        
+                        <img src="style/img/20160624045552735.jpg"></div>
                 </div>
             </div>
         </div>

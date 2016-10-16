@@ -2,6 +2,7 @@
 namespace frontend\modules\web\controllers;
 use Yii;
 use yii\web\Controller;
+use frontend\modules\web\models\SettingWeb;
 
 /**
  * 网站的首页控制器
@@ -36,7 +37,12 @@ class IndexController extends Controller
      */
     public function actionContactUs()
     {
-         return $this->render("contact-us"); 
+         $model = new SettingWeb();
+         $viewData = $model->getContact();
+         return $this->render("contact-us",[
+             "model"=>$model,
+             "viewData" =>$viewData,
+         ]); 
     }
     
     

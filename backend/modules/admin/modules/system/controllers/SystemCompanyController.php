@@ -93,6 +93,7 @@ class SystemCompanyController extends Controller
         }
         if(Yii::$app->request->post()){
             $companyContent = Yii::$app->request->post('content');
+            $companyContent = CommonHelp::saveSummernoteImgs($companyContent);     
             //上传图片信息
             $_FILES['SettingBackend[value]'] = $_FILES['cover'];
             CommonHelp::updatePhoto($model, array("value"), $data);
@@ -102,11 +103,14 @@ class SystemCompanyController extends Controller
             if(!$result){
                 Yii::$app->getSession()->setFlash('error', "操作失败!"); 
             }else{
-                $viewData['companyContent'] = $companyContent;
+                $viewData['companyContent'] = CommonHelp::replaceContentImgUrl($companyContent);
                 $viewData['companyHomeImg'] = $companyHomeImg;                
                 Yii::$app->getSession()->setFlash('success', '操作成功!');
             }
-        }        
+        }
+        if(!empty($viewData['companyContent'])){
+            $viewData['companyContent'] = CommonHelp::replaceContentImgUrl($viewData['companyContent']);
+        }
         echo $this->render('create', [
             'model' => $model,
             'master_navigation_id' =>$this->master_navigation_id,

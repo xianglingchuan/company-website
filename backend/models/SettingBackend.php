@@ -17,21 +17,7 @@ use common\helpers\Models;
  */
 class SettingBackend extends Setting {
 
-    private $ABOUT_ID = 41;
-    private $COMPANY_CERTIFICATE_ID = 51;
-    private $CONTACT_ID = 61;
-    private $SITE_BASIC_ID = 11;
-
-    /**
-     * 获取公司简介信息
-     *
-     * @return array
-     */
-    public function getCompany() {
-        $list = $this::find()->select("id, parent_id, code, type, value")->where("parent_id=" . $this->ABOUT_ID)->asArray()->all();
-        return $list;
-    }
-
+  
     /**
      * 保存公司简介信息
      *
@@ -49,6 +35,7 @@ class SettingBackend extends Setting {
         return false;
     }
 
+    
     /**
      * 后台获取封面路径
      */
@@ -60,16 +47,7 @@ class SettingBackend extends Setting {
         }
     }
 
-    /**
-     * 获取企业资质
-     *
-     * @return array
-     */
-    public function getCompanyCertificate() {
-        $info = $this::find()->select("id, parent_id, code, type, value")->where("id=" . $this->COMPANY_CERTIFICATE_ID)->asArray()->one();
-        return $info;
-    }
-
+  
     /**
      * 修改企业资质
      *
@@ -81,19 +59,7 @@ class SettingBackend extends Setting {
         return $model->save(false);
     }
     
-    
-    
-    /**
-     * 获取联系方式
-     *
-     * @return array
-     */
-    public function getContact(){
-        $list = $this::find()->select("id, parent_id, code, type, value")->where("parent_id=" . $this->CONTACT_ID)->asArray()->all();
-        return $list;
-    }
-    
-    
+        
     /**
      * 保存联系方式
      *
@@ -109,17 +75,6 @@ class SettingBackend extends Setting {
             return true;
         }
         return false;
-    }
-    
-    
-    /**
-     * 获取网站基本信息
-     *
-     * @return array
-     */
-    public function getSiteBasic(){
-        $list = $this::find()->select("id, parent_id, code, type, value")->where("parent_id=" . $this->SITE_BASIC_ID)->asArray()->all();
-        return $list;  
     }
     
     
@@ -140,7 +95,4 @@ class SettingBackend extends Setting {
         }
         return false;
     }
-    
-    
-    
 }

@@ -58,13 +58,7 @@ class SystemContactController extends Controller
     public function actionIndex()
     {
         $model = new SettingBackend();
-        $list = $model->getContact();
-        $viewData = [];
-        if(!empty($list)){
-            foreach($list as $buf){
-                $viewData[$buf['code']] = $buf['value'];
-            }
-        }
+        $viewData = $model->getContact();
         echo $this->render('view', [
             'model' => $model,
             'master_navigation_id' =>$this->master_navigation_id,
@@ -80,7 +74,7 @@ class SystemContactController extends Controller
     public function actionCreate()
     {
         $model = new SettingBackend();
-        $list = $model->getContact();
+        $list = SettingBackend::find()->select("id, parent_id, code, type, value")->where("parent_id=" . $model->CONTACT_ID)->asArray()->all();
         $viewData = [];
         $saveDataId = [];
         if(!empty($list)){
@@ -97,14 +91,15 @@ class SystemContactController extends Controller
               $addressTwo = Yii::$app->request->post('contactAddressTwo');
               $addressThree = Yii::$app->request->post('contactAddressThree');
               $saveData = [["id"=>$saveDataId['contactTel'], "value"=>$tel],['id'=>$saveDataId['contactPhone'], "value"=>$phone],
-                           ["id"=>$saveDataId['contactEmail'], "value"=>$email],['id'=>$saveDataId['contactAddressone'], "value"=>$addressOne],
-                           ["id"=>$saveDataId['contactAddresstwo'], "value"=>$addressTwo],['id'=>$saveDataId['contactAddressthree'], "value"=>$addressThree],
+                           ["id"=>$saveDataId['contactEmail'], "value"=>$email],['id'=>$saveDataId['contactAddressOne'], "value"=>$addressOne],
+                           ["id"=>$saveDataId['contactAddressTwo'], "value"=>$addressTwo],['id'=>$saveDataId['contactAddressThree'], "value"=>$addressThree],
                           ];
             $result = $model->updateContact($saveData);
             if(!$result){
                 Yii::$app->getSession()->setFlash('error', "操作失败!"); 
             }else{
                 Yii::$app->getSession()->setFlash('success', '操作成功!');
+                $viewData = $model->getContact();
             }
         }
         echo $this->render('create', [

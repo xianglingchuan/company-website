@@ -204,7 +204,7 @@ class Common {
      */
     static function replaceImgUrl($content, $hostUrl="")
     {
-        $hostUrl = !empty($hostUrl) ? $hostUrl : Yii::$app->request->hostInfo;
+        $hostUrl = !empty($hostUrl) ? $hostUrl : Yii::$app->request->hostInfo."/";
         $array = array();
         preg_match_all('/<img(.*?)>/', $content, $array);
         if (!empty($array[0])) {

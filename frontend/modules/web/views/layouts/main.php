@@ -42,38 +42,10 @@ AppAsset::register($this);
     </head>
     <body>
         <?php $this->beginBody() ?>
-        
         <?= $content ?>
-        
         <!--begin 底部信息-->
-        <div id="footer">
-            <div class="w1">
-                <div class="fl">
-                    <div class="banquan">
-                        版权所有： © 北京华泰瑞诚纺织品有限公司<br>
-                        联系电话：010-57169851　手机：13621346059　13146209462<br>
-                        邮箱：lingdonghua2010@163.com<br>
-                        地址：（瑞诚纺织北方总部）河北省廊坊市永清工业开发区浙商新城 7路 128号<br>
-                        地址：（一厂）北京市大兴区南中轴路金星园22号院　地址：（二厂）北京市朝阳区十八里店乡老君堂工业区103号院                                        <div><a href="http://www.ynhl.net/" target="_blank">网站建设：</a><a href="http://www.ynhl.net/" target="_blank">一诺互联</a><br></div>
-                    </div>
-                    <div class="ftb">
-                        <span><img src="/style/web/img/ftb1.jpg"><label>经营性网站<br>备案信息</label></span>
-                        <span><img src="/style/web/img/ftb2.jpg"><label>中国<br>互联网协会</label></span>
-                        <span><img src="/style/web/img/ftb3.jpg"><label>网警110<br>报警服务</label></span>
-                        <span><img src="/style/web/img/ftb4.jpg"><label>不良信息<br>举报中心</label></span>
-                        <span><img src="/style/web/img/ftb5.jpg"><label>诚信网站<br>示范企业</label></span>
-                    </div>
-                </div>
-                <div class="fr">
-                    <div class="fr ewm">
-                        <img src="/style/web/img/ewm.jpg">
-                        扫一扫，咨询我们
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?= frontend\modules\web\widgets\Footer::widget(); ?>
         <!--end 底部信息-->
-
         <?php $this->endBody() ?>
     </body>
 </html>
