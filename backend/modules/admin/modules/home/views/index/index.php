@@ -18,37 +18,13 @@ $this->registerCss('.x_normal_left {width:40%}');
                         <caption>基本资料</caption>
                         <tbody>
                         <tr>
-                            <td class="x_normal_left" valign="top"> 登录名称：</td>
+                            <td class="x_normal_left" valign="top"> 登录名称：<BR><BR></td>
                             <td class="x_normal_rigth"
-                                valign="top"><?= Html::encode(Yii::$app->user->identity->username); ?></td>
+                                valign="top"><?= Html::encode(Yii::$app->user->identity->username); ?><BR><BR></td>
                         </tr>
                         <tr>
-                            <td class="x_normal_left" valign="top"> 邮箱：</td>
-                            <td class="x_normal_rigth"
-                                valign="top"></td>
-                        </tr>                        
-                        <tr>
-                            <td class="x_normal_left" valign="top"> 头像：</td>
-                            <td class="x_normal_rigth" valign="top">
-                                <?php //if (!empty(Yii::$app->user->identity->head)): ?>
-                                    <?php //Html::img(Url::home(true) . Yii::$app->user->identity->head, ['width' => '100px', 'height' => '100px']); ?>
-                                <?php //else: ?>
-                                    暂无头像
-                                <?php //endif; ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="x_normal_left" valign="top"> 最后登录时间：</td>
-                            <td class="x_normal_rigth"
-                                valign="top"></td>
-                        </tr>
-                        <tr>
-                            <td class="x_normal_left" valign="top">
-                                <div class="x_edit_info">
-                                    <div class="x_edit_info_btn"><a href="<?= Url::to(['/manager/shop/update']); ?>">修改密码</a>
-                                    </div>
-                                </div>
-                            </td>
+                            <td class="x_normal_left" valign="top"> 登录时间：</td>
+                            <td class="x_normal_rigth" valign="top"><?php echo date("Y-m-d H:i:s",time());?></td>
                         </tr>
                         </tbody>
                     </table>

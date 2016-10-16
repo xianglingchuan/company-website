@@ -10,15 +10,14 @@ $active = [
     //首页
     '/admin/home/index/index' => ['/home/index', '/home/logs'],
     //系统管理
-    '/admin/system/system-navigation/index' => ['/system/system-navigation', '/system/system-gift',
-                                                '/system/system-user', '/system/system-wish', '/system/system-tag',
-                                                '/system/system-ability', '/system/system-medal', '/system/system-feedback', '/system/system-weather', '/system/system-version'],
+    '/admin/system/system-site-basic/index' => ['/system/system-company', '/system/system-company-certificate',
+                                                '/system/system-site-basic', '/system/system-contact'],
     //任务管理
     '/admin/task/task-execute/index' => [ '/task/task-setup', '/task/task-noviciate-setup', '/task/task-execute', '/task/task-execute-comment', '/task/task-execute-laud', '/task/task-plan', '/system/system-task', '/system/system-task-block', '/task/task-execute-ability'],
     //用户管理
     '/admin/user/user/index' => ['/user/user-wish', '/user/user-notice', '/user/user-medal', '/user/user', '/user/user-wechat', '/user/user-account', '/user/user-account-flow', '/user/user-account-integral-flow', '/user/user-gift', '/user/user-growup-record', '/user/user-images', '/user/user-ability'],
     //内容管理
-    '/admin/system/system-category/index' => ['/system/system-category', '/system/system-article', '/system/system-book'],
+    '/admin/system/system-category/index' => ['/system/system-category', '/system/system-article', '/system/system-book','/system/system-banner', '/system/system-client'],
     
     
     

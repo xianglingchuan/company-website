@@ -12,16 +12,13 @@
             <div class="container">
                 <div class="w1 xq_plan1">
                     <div class="left_menu">
-                        <div class="left_menu_t">
+                        <div class="left_menu_t" style="height:113px;">
                             <h5>客户名录</h5>
                             <span>Customer list</span>
                         </div>
                         <ul>
-                            <li class="dqlm"><span class="sj1"></span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=8">客户名录</a></li></ul>
-                        <div id="menu2" class="zfd" style="position: static; top: 185px;">
-                            <div class="zbwx"><p><img src="./client_files/ewm.jpg"></p><span>扫一扫，咨询我们</span></div>
-                            <div class="zblx"><img src="./client_files/dianh.jpg"></div>
-                        </div>
+                            <li class="dqlm"><span class="sj1"></span><a href="/web/index/client">客户名录</a></li></ul>
+                        <?= frontend\modules\web\widgets\LeftAd::widget(); ?>
                     </div>
                     <script>
                         var subnavT = $(".zfd").offset().top;
@@ -43,7 +40,7 @@
                     <div class="fr xq_plan1_nr" id="dwei">
                         <div class="wz">
                             <span>客户名录</span>
-                            <div class="fr">您现在所在的位置：<a href="http://www.bjhtrc.com/">首页</a> &gt; <a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=8">客户名录</a></div>
+                            <div class="fr">您现在所在的位置：<a href="/web/index/index">首页</a> &gt; <a href="/web/index/client">客户名录</a></div>
                         </div>
                         <div class="article" style="border-bottom:none;"><div data-webp-ctx-e="1" id="blogDetailDiv" style="font-size: 14px; color: rgb(0, 0, 0);">
                                 <div class="blog_details_20120222">

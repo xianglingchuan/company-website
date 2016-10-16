@@ -27,7 +27,7 @@ class SystemSiteBasicController extends Controller
 
     public $layout = '/system_main';
     
-    public $master_navigation_id = CommonHelp::CONTENT_MANAGER_ID; 
+    public $master_navigation_id = CommonHelp::SYSTEM_MANAGER_ID; 
     
     public $enableCsrfValidation = false; 
     
