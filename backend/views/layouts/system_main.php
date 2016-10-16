@@ -32,11 +32,11 @@ $categoryId = 13;
 <div class="footer">
     <div class="footer_container">
         <ul>
-            <li><a href="#">关于小猪班克</a></li>
+            <li><a href="#">关于我们</a></li>
             <li><a href="#">联系我们</a></li>
             <li><a href="#">免责声明</a></li>
         </ul>
-        <p>Copyright ©2016 jurongyi.cc Inc. All Rights Reserved.<a>京ICP备16028066号</a></p>
+        <p>Copyright ©2016 aoyuechuanglian.com Inc. All Rights Reserved.<!--<a>京ICP备16028066号</a>--></p>
     </div>
 </div>
 <?php $this->endBody() ?>

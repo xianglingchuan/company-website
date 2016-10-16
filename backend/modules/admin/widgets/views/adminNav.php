@@ -33,9 +33,9 @@ if (!empty($nav)) {
 <div class="x_header_all">
     <div class="x_header">
         <div class="x_logo x_header_left">
-            <a href="<?= \yii\helpers\Url::to(['/admin/user/index/index']) ?>">
-                <?= Html::img('/style/img/index/logo.png') ?>
-            </a>
+           
+                <?php //= Html::img('/style/img/index/logo.png') ?>
+            <h2 style="margin-top: 15px;">京源佳益管理系统</h2>
         </div>
         <div class="x_header_right">
             <div class="x_header_right_top">

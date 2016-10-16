@@ -37,81 +37,110 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
 
                     <?= backend\modules\admin\widgets\AlertWidget::widget(); ?>
                     <div>
-                        
-                        
+
+
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteName'); ?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "siteName", $viewData['siteName'], ["class"=>"form-control"]);?></div>
+                                <div class="col-sm-4"><?php echo Html::input("text", "siteName", $viewData['siteName'], ["class" => "form-control"]); ?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>
-                        
 
-                        
+
+
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteKeyword'); ?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "siteKeyword", $viewData['siteKeyword'], ["class"=>"form-control"]);?></div>
+                                <div class="col-sm-8"><?php echo Html::input("area", "siteKeyword", $viewData['siteKeyword'], ["class" => "form-control"]); ?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>
-                        
-                        
+
+
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteDescription'); ?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "siteDescription", $viewData['siteDescription'], ["class"=>"form-control"]);?></div>
+                                <div class="col-sm-8"><?php echo Html::input("text", "siteDescription", $viewData['siteDescription'], ["class" => "form-control"]); ?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>
-                        
+
+
                         
                         <div class="form-group form-horizontal">
-                            <div class="form-group form-horizontal">
-                                <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteQrCode'); ?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "siteQrCode", $viewData['siteQrCode'], ["class"=>"form-control"]);?></div>
+                            <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteQrCode'); ?></label>
+                            <div class="col-sm-3">
+                                <?php echo Html::fileInput("siteQrCode", "", []);?>
                             </div>
+                                <?php
+                                if (!empty($viewData['siteQrCode'])) {
+                                    echo "<div class='col-sm-2'>" . Html::img($model->getImgPath($viewData['siteQrCode']), ['style' => "max-width:300px;"]) . "</div>";
+                                }
+                                ?>
                             <div class="hr-line-dashed"></div>
                         </div>
-                        
-                        
-                        
+
+
+
+
+
                         <div class="form-group form-horizontal">
-                            <div class="form-group form-horizontal">
-                                <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteTopLog'); ?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "siteTopLog", $viewData['siteTopLog'], ["class"=>"form-control"]);?></div>
+                            <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteTopLog'); ?></label>
+                            <div class="col-sm-3">
+                                <?php echo Html::fileInput("siteTopLog", "", []);?>
                             </div>
+                                <?php
+                                if (!empty($viewData['siteTopLog'])) {
+                                    echo "<div class='col-sm-2'>" . Html::img($model->getImgPath($viewData['siteTopLog']), ['style' => "max-width:300px;"]) . "</div>";
+                                }
+                                ?>
                             <div class="hr-line-dashed"></div>
                         </div>
-                        
-                        
+
+
+
+
+
                         <div class="form-group form-horizontal">
-                            <div class="form-group form-horizontal">
-                                <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteTopAd'); ?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "siteTopAd", $viewData['siteTopAd'], ["class"=>"form-control"]);?></div>
+                            <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteTopAd'); ?></label>
+                            <div class="col-sm-3">
+                                <?php echo Html::fileInput("siteTopAd", "", []);?>
                             </div>
+                                <?php
+                                if (!empty($viewData['siteTopAd'])) {
+                                    echo "<div class='col-sm-2'>" . Html::img($model->getImgPath($viewData['siteTopAd']), ['style' => "max-width:300px; "]) . "</div>";
+                                }
+                                ?>
                             <div class="hr-line-dashed"></div>
                         </div>
-                        
-                        
+
+
+
+
                         <div class="form-group form-horizontal">
-                            <div class="form-group form-horizontal">
-                                <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteLeftAd'); ?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "siteLeftAd", $viewData['siteLeftAd'], ["class"=>"form-control"]);?></div>
+                            <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteLeftAd'); ?></label>
+                            <div class="col-sm-3">
+                            <?php echo Html::fileInput("siteLeftAd", "", []);?>
                             </div>
+                                <?php
+                                if (!empty($viewData['siteLeftAd'])) {
+                                    echo  "<div class='col-sm-2'>" . Html::img($model->getImgPath($viewData['siteLeftAd']), ['style' => "max-width:300px;"]) . "</div>";
+                                }
+                                ?>
                             <div class="hr-line-dashed"></div>
                         </div>
-                        
-                        
-                        
-                        
-                       
+
+
+
+
+
+
                     </div>
-                    <?= Html::submitButton('保存', ['class' => 'btn btn-primary', 'name' => 'submit-button']); ?>                  
-                    <?= Html::a('返回', ['index'], ['class' => 'btn btn-default']) ?>                    
+<?= Html::submitButton('保存', ['class' => 'btn btn-primary', 'name' => 'submit-button']); ?>                  
+<?= Html::a('返回', ['index'], ['class' => 'btn btn-default']) ?>                    
                 </div>
-            <?php ActiveForm::end(); ?>
+<?php ActiveForm::end(); ?>
             </div>
         </div>
         <!-- 创建产品 end -->

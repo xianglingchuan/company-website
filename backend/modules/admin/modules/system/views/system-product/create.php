@@ -72,7 +72,7 @@ $this->registerJsFile(Url::to('/style/summernote/summernote.js'), ['depends' => 
                                 <div class="widget-container fluid-height">
                                     <div class="heading" style="height:30px; padding-left: 50px;"><B style="float:left;"><?php echo $model->getAttributeLabel("content"); ?></B></div>
                                     <div class="widget-content padded">
-                                        <div id="summernote"></div>
+                                        <div id="summernote"><?php echo $model->content; ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +97,6 @@ $this->registerJsFile(Url::to('/style/summernote/summernote.js'), ['depends' => 
                 theme: 'monokai'
             }
         });
-        $('#summernote').code('<?php echo str_replace("'", "\"", $model->content); ?>');
     });
 
     function mySubmit() {

@@ -1,7 +1,7 @@
 
 <!--begin 顶部信息--> 
 <div id="header">
-   <?= frontend\modules\web\widgets\TopLog::widget(); ?>
+   <?= frontend\modules\web\widgets\TopLogo::widget(); ?>
    <?= frontend\modules\web\widgets\TopNavigation::widget(); ?>
    <?= frontend\modules\web\widgets\TopBanner::widget(); ?>
 </div>

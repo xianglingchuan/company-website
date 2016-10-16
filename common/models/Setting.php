@@ -99,4 +99,15 @@ class Setting extends \yii\db\ActiveRecord
             }    
         }
     }
+    
+    
+    
+    /**
+     * 默认的图片
+     */
+    public function getDefaultCoverPath(){
+        return Yii::$app->request->hostInfo."/img/default/system_gift_cover.jpg";
+    }   
+    
+    
 }

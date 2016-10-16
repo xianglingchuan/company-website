@@ -156,6 +156,13 @@ class CommonHelp extends \common\helpers\Common {
      * @author  xlc
      * @return  string
      */    
+    /**
+     * 保存Summernote编辑器的图片信息
+     * 
+     * @param   string  $content  文件的流信息
+     * @author  xlc
+     * @return  string
+     */    
     static public function saveSummernoteImgs($content) {
         $array = array();
         preg_match_all('/<img(.*?)>/', $content, $array);
@@ -167,12 +174,26 @@ class CommonHelp extends \common\helpers\Common {
                         $arr = array('<img src="', '">"', 'data:image/png;base64,', 'data:image/jpeg;base64,', 'data:image/jpg;base64,', 'data:image/gif;base64,');
                         $suffix = strpos($str, "image/png") ? "png" : "jpg";
                         $str = str_replace($arr, "", $str);
+                        //发现会出现这种情况 UpSmApSlAClKUAf/Z" style="width: 547px;">
+                        if(strpos($str, '"') !==false){
+                            $str = substr($str, 0, strpos($str, '"'));
+                        }
                         $filename = self::SaveFileStream(base64_decode($str), $suffix);
                         if ($filename != "") {
                             $filename = str_replace("../../frontend/web/", "", $filename);
-                            $filename = "<img src=\"/" . $filename . "\">";
+                            $filename = "<img src=\"" . $filename . "\">";
                         }
                         $content = str_replace($tmp, $filename, $content);
+                    }else{
+                        //去掉img中的其它标记内容
+                        $str = substr($tmp, strpos($tmp, "src=")+5);
+                        $filename = "";
+                        if(!empty($str)){
+                            $str = substr($str, 0, strpos($str, '"'));
+                            $filename = "<img src=\"" . $str . "\">";
+                        }
+                        $content = str_replace($tmp, $filename, $content);
+                        //echo "<BR>".$str."<BR>";
                     }
                 }
             }

@@ -41,20 +41,24 @@ $this->registerCssFile(yii\helpers\Url::to('/style/css/my_shop.css'), ['depends'
                     ],
                     [
                         'label' => $model->myLabels('siteQrCode'),
-                        'value' => isset($viewData['siteQrCode']) && !empty($viewData['siteQrCode']) ? $viewData['siteQrCode'] : "暂无", 
+                        'format' => ['raw'],
+                        'value' => !empty($viewData['siteQrCode']) ? Html::img($model->getImgPath($viewData['siteQrCode']),['style'=>"max-width:300px;"]) : "",
                     ],
                     [
                         'label' => $model->myLabels('siteTopLog'),
-                        'value' => isset($viewData['siteTopLog']) && !empty($viewData['siteTopLog']) ? $viewData['siteTopLog'] : "暂无", 
+                        'format' => ['raw'],
+                        'value' => !empty($viewData['siteTopLog']) ? Html::img($model->getImgPath($viewData['siteTopLog']),['style'=>"max-width:300px;"]) : "",
                     ],
                     [
                         'label' => $model->myLabels('siteTopAd'),
-                        'value' => isset($viewData['siteTopAd']) && !empty($viewData['siteTopAd']) ? $viewData['siteTopAd'] : "暂无", 
-                    ],     
+                        'format' => ['raw'],
+                        'value' => !empty($viewData['siteTopAd']) ? Html::img($model->getImgPath($viewData['siteTopAd']),['style'=>"max-width:300px;"]) : "",
+                    ],
                     [
                         'label' => $model->myLabels('siteLeftAd'),
-                        'value' => isset($viewData['siteLeftAd']) && !empty($viewData['siteLeftAd']) ? $viewData['siteLeftAd'] : "暂无", 
-                    ],                      
+                        'format' => ['raw'],
+                        'value' => !empty($viewData['siteLeftAd']) ? Html::img($model->getImgPath($viewData['siteLeftAd']),['style'=>"max-width:300px;"]) : "",
+                    ],
                 ],
             ])
             ?>

@@ -14,6 +14,8 @@ use common\helpers\Models;
 use backend\models\SystemCategoryBackend;
 use backend\models\SettingBackend;
 use yii\web\UploadedFile;
+use common\helpers\Common;
+
 
 
 /**
@@ -84,29 +86,54 @@ class SystemSiteBasicController extends Controller
         $list = $model->getSiteBasic();
         $viewData = [];
         $saveDataId = [];
+        $imageData = [];
+        $imageFilter = ["siteQrCode","siteTopLog","siteTopAd", "siteLeftAd"];
         if(!empty($list)){
             foreach($list as $buf){
                 $viewData[$buf['code']] = $buf['value'];
                 $saveDataId[$buf['code']] = $buf['id'];
+                if(in_array($buf['code'], $imageFilter)){
+                    $imageData[$buf['code']] = $buf['value'];                    
+                }
             }
         }
         if(Yii::$app->request->post()){
             $sitename = Yii::$app->request->post('siteName');
             $sitekeyword = Yii::$app->request->post('siteKeyword');
             $sitedescription = Yii::$app->request->post('siteDescription');
-            $siteqrcode = Yii::$app->request->post('siteQrCode');
-            $sitetoplog = Yii::$app->request->post('siteTopLog');
-            $sitetopad = Yii::$app->request->post('siteTopAd'); 
-            $siteleftad = Yii::$app->request->post('siteLeftAd'); 
+            //开始循环上传图片
+            $saveImages = [];
+            foreach($imageFilter as &$fileName){      
+                $uploadImgPath = "";
+                if(isset($_FILES[$fileName]) && !empty($_FILES[$fileName])){
+                    $image = UploadedFile::getInstanceByName($fileName);    
+                    if(!empty($image)){
+                        $_fileName = CommonHelp::createImageDirectory() . "" . CommonHelp::createFileName($image->getExtension());
+                        if ($image->saveAs($_fileName)) {
+                            $_fileName = str_replace("../../frontend/web/", "", $_fileName);
+                            $uploadImgPath = $_fileName;    
+                        }                    
+                    }
+                }
+                $saveImages[$fileName] = !empty($uploadImgPath) ? $uploadImgPath : $imageData[$fileName];
+            }        
             $saveData =  [["id"=>$saveDataId['siteName'], "value"=>$sitename],['id'=>$saveDataId['siteKeyword'], "value"=>$sitekeyword],
-                         ["id"=>$saveDataId['siteDescription'], "value"=>$sitedescription],['id'=>$saveDataId['siteQrCode'], "value"=>$siteqrcode],
-                         ["id"=>$saveDataId['siteTopLog'], "value"=>$sitetoplog],['id'=>$saveDataId['siteTopAd'], "value"=>$sitetopad],
-                         ['id'=>$saveDataId['siteLeftAd'], "value"=>$siteleftad]];
+                         ["id"=>$saveDataId['siteDescription'], "value"=>$sitedescription],['id'=>$saveDataId['siteQrCode'], "value"=>$saveImages['siteQrCode']],
+                         ["id"=>$saveDataId['siteTopLog'], "value"=>$saveImages['siteTopLog']],['id'=>$saveDataId['siteTopAd'], "value"=>$saveImages['siteTopAd']],
+                         ['id'=>$saveDataId['siteLeftAd'], "value"=>$saveImages['siteLeftAd']]];
             $result = $model->updateContact($saveData);
             if(!$result){
                 Yii::$app->getSession()->setFlash('error', "操作失败!"); 
             }else{
                 Yii::$app->getSession()->setFlash('success', '操作成功!');
+                $list = $model->getSiteBasic();
+                $viewData = [];
+                $imageFilter = ["siteQrCode","siteTopLog","siteTopAd", "siteLeftAd"];
+                if(!empty($list)){
+                    foreach($list as $buf){
+                        $viewData[$buf['code']] = $buf['value'];
+                    }
+                }
             }
         }
         echo $this->render('create', [

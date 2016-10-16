@@ -11,11 +11,13 @@ use yii;
  * @date        2016-05-27
  * @copyright   2016 PRG
  */
-class TopLog extends \yii\bootstrap\Widget
+class TopLogo extends \yii\bootstrap\Widget
 {
 
     public function run()
     {
-        return $this->render('topLog', []);
+        //读取顶部的logo图片
+        
+        return $this->render('topLogo', []);
     }
 }
