@@ -53,4 +53,19 @@ class SystemProductWeb extends SystemProduct {
                        [":id"=>$articleId, ":category_id"=>$categoryId, ":is_del"=>Models::IS_DEL_NO, ":is_show"=>Models::IS_SHOW_YES])->orderBy("id DESC")->asArray()->one();
         return $info;
     }
+    
+    
+
+    public function getListNotPage($categoryId=0, $limit=12) {
+       $data = $this::find()->where("is_del=:is_del AND is_show=:is_show", [":is_del"=>Models::IS_DEL_NO,":is_show"=>  Models::IS_SHOW_YES]);
+       if(intval($categoryId)>=1){
+          $data->andWhere("category_id=:category_id",[":category_id"=>$categoryId]);   
+       }
+       $model = $data->limit($limit)->asArray()->all();
+       CommonHelp::handleImagePath($model, ["cover"]);
+       return $model;
+    } 
+    
+    
+    
 }

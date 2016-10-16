@@ -28,18 +28,38 @@
                 <!--begin 产品分类切换-->
                 <div class="title cf">
                     <ul class="title-list cf ">
-                        <li class="on">椅套系列</li>
-                        <li>桌布系列</li>
-                        <li>窗帘系列</li>
-                        <li>软包墙系列</li>
+                        <?php
+                        if(!empty($categoryList)){
+                            foreach($categoryList as $category){
+                                echo '<li class="on">'.$category['name'].'</li>';
+                            }
+                        }
+                        ?>
                     </ul>
                 </div>
                 <!--end 产品分类切换-->
 
                 <!--begin 产品内容-->
                 <div class="product-wrap">
-                    <div class="product show">
-                        <ul class="cf">
+                    <?php
+                    if(!empty($categoryList)){
+                        foreach($categoryList as &$_category){
+                            echo '<div class="product show"><ul class="cf">';
+                            if(count($_category['products']) >=1){
+                              foreach($_category['products'] as $product){ ?>
+                    <li><a href="/web/product/view?id=<?php echo $product['id']; ?>&category_id=<?php echo $product['category_id'];?>" class="img_box"><img src="<?php echo $product['cover'];?>" alt="<?php echo $product['title'];?>"></a><a href="#" class="cp_txt1"><?php echo $product['title'];?></a></li>
+                              <?php
+                              }
+                            } 
+                            echo '</ul></div>';
+                        }
+                    }                        
+                    ?>
+                    
+                    
+                    
+                        
+<!--                            <li><a href="#" class="img_box"><img src="/style/web/img/20160621103405391.jpg" alt="弹力椅套"></a><a href="#" class="cp_txt1">弹力椅套</a></li>
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621103405391.jpg" alt="弹力椅套"></a><a href="#" class="cp_txt1">弹力椅套</a></li>
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621103405391.jpg" alt="弹力椅套"></a><a href="#" class="cp_txt1">弹力椅套</a></li>
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621103405391.jpg" alt="弹力椅套"></a><a href="#" class="cp_txt1">弹力椅套</a></li>
@@ -50,11 +70,8 @@
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621103405391.jpg" alt="弹力椅套"></a><a href="#" class="cp_txt1">弹力椅套</a></li>
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621103405391.jpg" alt="弹力椅套"></a><a href="#" class="cp_txt1">弹力椅套</a></li>
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621103405391.jpg" alt="弹力椅套"></a><a href="#" class="cp_txt1">弹力椅套</a></li>
-                            <li><a href="#" class="img_box"><img src="/style/web/img/20160621103405391.jpg" alt="弹力椅套"></a><a href="#" class="cp_txt1">弹力椅套</a></li>
-                            <li><a href="#" class="img_box"><img src="/style/web/img/20160621103405391.jpg" alt="弹力椅套"></a><a href="#" class="cp_txt1">弹力椅套</a></li>
-                        </ul>
-                    </div>
-                    <div class="product ">
+                        -->
+<!--                    <div class="product ">
                         <ul class="cf">
 
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621104107410.jpg" alt="酒店纯色桌布"></a><a href="#" class="cp_txt1">酒店纯色桌布</a></li>
@@ -66,8 +83,8 @@
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621104107410.jpg" alt="酒店纯色桌布"></a><a href="#" class="cp_txt1">酒店纯色桌布</a></li>
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621104107410.jpg" alt="酒店纯色桌布"></a><a href="#" class="cp_txt1">酒店纯色桌布</a></li>                                    
                         </ul>
-                    </div>
-                    <div class="product ">
+                    </div>-->
+<!--                    <div class="product ">
                         <ul class="cf">
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621104328765.jpg" alt="卷式窗帘"></a><a href="#" class="cp_txt1">卷式窗帘</a></li>
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621104328765.jpg" alt="卷式窗帘"></a><a href="#" class="cp_txt1">卷式窗帘</a></li>
@@ -78,8 +95,8 @@
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621104328765.jpg" alt="卷式窗帘"></a><a href="#" class="cp_txt1">卷式窗帘</a></li>
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621104328765.jpg" alt="卷式窗帘"></a><a href="#" class="cp_txt1">卷式窗帘</a></li>                                    
                         </ul>
-                    </div>
-                    <div class="product ">
+                    </div>-->
+<!--                    <div class="product ">
                         <ul class="cf">
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621104624443.jpg" alt="会议室软包"></a><a href="#" class="cp_txt1">会议室软包</a></li>
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621104624443.jpg" alt="会议室软包"></a><a href="#" class="cp_txt1">会议室软包</a></li>
@@ -88,7 +105,7 @@
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621104624443.jpg" alt="会议室软包"></a><a href="#" class="cp_txt1">会议室软包</a></li>
                             <li><a href="#" class="img_box"><img src="/style/web/img/20160621104624443.jpg" alt="会议室软包"></a><a href="#" class="cp_txt1">会议室软包</a></li>
                         </ul>
-                    </div>
+                    </div>-->
                 </div>
                 <!--end 产品内容-->
             </div>
@@ -103,14 +120,20 @@
                 <!--begin 公司简介标题-->
                 <div class="title2">
                     <h5>公司简介</h5>
-                    <div class="fr"><span>/ Company profile</span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=1">MORE＋</a></div>
+                    <div class="fr"><span>/ Company profile</span><a href="/web/index/company">MORE＋</a></div>
                 </div>
                 <!--end 公司简介标题-->
 
                 <!--begin 公司简介内容-->
                 <div class="plan2_newsnr1">
-                    <a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=1"><img src="style/img/20160615013312693.jpg" alt="公司简介"></a>
-                    <p>响应京津冀一体化发展战略，2015年12月12日北京大红门纺织品批发市场正式签约京南永清，瑞诚纺织北方拓展部也相继在永清开发区开工筹建，2016年5月中通快递总部落户永清，未来我公司与中通快递协同合作，实现优质产品的远程速递服务，主要产品服务包括：装饰布料，辅料、海绵、防水材料，墙艺软包装饰，商务办公配套布艺装饰，高档酒店椅套、办公椅套、沙发套、高强度弹力椅套、客车座套、高端影剧院、会场排椅套，会议桌布台呢、桌套，会场礼堂遥控幕布、医院窗帘、学校窗帘、酒店窗帘、电动窗帘，各种办公窗帘、金布环境装饰、军用伪装网、迷彩布装饰背景墙软包、LOGO电脑绣花、丝网印、热转印、数码印等产品服务。瑞诚产品通过了ISO9001：2008管理质量体系认证...</p>
+                    <a href="/web/index/company"><img src="<?php echo $model->getImgPath(Yii::$app->setting->get('companyHomeImg')); ?>" alt="公司简介"></a>
+                    <p>
+                    <?php
+                    $content = strip_tags(Yii::$app->setting->get('companyContent'));
+                    $content = mb_substr($content, 0, 1002);
+                    echo $content;
+                    ?>    
+                    </p>
                 </div>
                 <!--begin 公司简介内容-->
             </div>
@@ -125,21 +148,38 @@
                     <h5>新闻中心</h5>
                     <div class="fr">
                         <span>/ News Center</span>
-                        <a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=9">MORE＋</a>
+                        <a href="/web/news/index?category_id=5">MORE＋</a>
                     </div>
                 </div>
                 <!--end 新闻标题-->
 
                 <!--begin 新闻内容-->
                 <ul>
-                    <li>
-                        <div class="news-time"><span>26 </span><label>2016-07</label></div>
-                        <div class="news_nr">
-                            <a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=15&amp;id=47">华泰瑞诚低碳产品提升竞争力</a>
-                            <p>好面料是布艺装饰成功的一半，同时会给设计师带来更多的灵感和创作激情</p>
-                        </div>
-                    </li>
-                    <li>
+                    <?php
+                    if(!empty($articleList)){
+                        foreach($articleList as &$buf){ 
+                               $yearMonth = substr($buf['created_at'], 0, 7);
+                               $day = substr($buf['created_at'], 8, 2);
+                               //echo $yearMonth;
+                               //$content = strip_tags($buf['content']);
+                               //$content = mb_substr($content, 0, 100);
+                            ?>
+                            <li>
+                                <div class="news-time"><span><?php echo $day; ?></span><label><?php echo $yearMonth; ?></label></div>
+                                <div class="news_nr">
+                                    <a href="/web/news/view?id=<?php echo $buf['id'];?>&category_id=<?php echo $buf['category_id']?>"><?php echo $buf['title'];?></a>
+                                    <p><?php echo $buf['basic_facts'];?></p>
+                                </div>
+                            </li>                            
+                       <?php
+                       }
+                    }
+                    ?>
+                    
+
+                    
+                    
+<!--                    <li>
                         <div class="news-time"><span>14 </span><label>2016-07</label></div>
                         <div class="news_nr">
                             <a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=15&amp;id=46">北京华泰瑞诚定做沙发套</a>
@@ -159,7 +199,7 @@
                             <a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=15&amp;id=44">北京华泰瑞诚军用迷彩桌布</a>
                             <p>军用迷彩桌布、伪装网、设施罩北京华泰瑞诚纺织品有限公司，始创于1995年，总部坐落于亚洲最大的纺织品集散基地——中国绍兴...</p>
                         </div>
-                    </li>
+                    </li>-->
                 </ul>
                 <!--end 新闻内容-->                        
             </div>

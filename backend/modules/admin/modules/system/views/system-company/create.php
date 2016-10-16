@@ -48,7 +48,7 @@ $this->registerJsFile(Url::to('/style/summernote/summernote.js'), ['depends' => 
                             <?php
                             $url = "";
                             if (!empty($viewData['companyHomeImg'])) {
-                                $url = "<div class='col-sm-2'>" . Html::img($model->getImgPath($viewData['companyHomeImg']), ['style' => "max-width:100px; height:100px;"]) . "</div>";
+                                $url = "<div class='col-sm-2'>" . Html::img($model->getImgPath($viewData['companyHomeImg']), ['style' => "max-width:300px;"]) . "</div>";
                             }
                             ?>
                             <div class="form-group form-horizontal">

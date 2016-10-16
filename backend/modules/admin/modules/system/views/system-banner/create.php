@@ -45,7 +45,7 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
                             <?php
                             $url = "";
                             if (!empty($model->cover)) {
-                                $url = "<div class='col-sm-2'>" . Html::img($model->getCover(), ['style' => "max-width:100px; height:100px;"]) . "</div>";
+                                $url = "<div class='col-sm-2'>" . Html::img($model->getCover(), ['style' => "max-width:250px;"]) . "</div>";
                             }
                             echo $form->field($model, 'cover', [
                                 'template' => "{label}<div class='col-sm-2'>{input}</div>\n{error}" . $url,

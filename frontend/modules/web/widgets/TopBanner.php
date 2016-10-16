@@ -1,6 +1,7 @@
 <?php
 namespace frontend\modules\web\widgets;
 use yii;
+use frontend\modules\web\models\SystemBannerWeb;
 
 /**
  * 信贷经理导航小部件
@@ -15,6 +16,8 @@ class TopBanner extends \yii\bootstrap\Widget
 
     public function run()
     {
-        return $this->render('topBanner', []);
+        $model = new SystemBannerWeb();
+        $list = $model->getList();
+        return $this->render('topBanner', ['list'=>$list]);
     }
 }

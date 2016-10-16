@@ -30,7 +30,7 @@ $this->registerCssFile(yii\helpers\Url::to('/style/css/my_shop.css'), ['depends'
                     [
                         'label' => $model->myLabels('companyHomeImg'),
                         'format' => ['raw'],
-                        'value' => !empty($viewData['companyHomeImg']) ? Html::img($model->getImgPath($viewData['companyHomeImg']),['style'=>"width:100px; height:100px;"]) : "",
+                        'value' => !empty($viewData['companyHomeImg']) ? Html::img($model->getImgPath($viewData['companyHomeImg']),['style'=>"max-width:250px;"]) : "",
                     ],
                     [
                         'label' => $model->myLabels('companyContent'),

@@ -54,7 +54,7 @@ $this->registerCssFile(yii\helpers\Url::to('/style/css/my_shop.css'), ['depends'
                                     'attribute' => "cover",
                                     'format' => 'raw',
                                     'value' => function($model) {
-                                        return !empty($model->cover) ? Html::img($model->getCover(), ['style' => "width:100px; height:100px"]) : "";
+                                        return !empty($model->cover) ? Html::img($model->getCover(), ['style' => "max-width:250px;"]) : "";
                                     }
                                 ],
                                 'sort',
