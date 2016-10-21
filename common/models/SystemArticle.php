@@ -48,6 +48,7 @@ class SystemArticle extends \yii\db\ActiveRecord
             [['created_at', 'updated_at'], 'safe'],
             [['title', 'cover'], 'string', 'max' => 200],
             [['author', 'source'], 'string', 'max' => 100],
+            [['describe'], 'string', 'max' => 256],
             [['basic_facts', 'short_basic_facts'], 'string', 'max' => 256],
             
             //封面上传
@@ -87,7 +88,8 @@ class SystemArticle extends \yii\db\ActiveRecord
             'updated_at' => '修改日期',
             'updated_uid' => '修改用户',
             'basic_facts' => 'SEO描述',
-            'short_basic_facts' => 'SEO关键字'
+            'short_basic_facts' => 'SEO关键字',
+            'describe' => '简短描述'
         ];
     }
     

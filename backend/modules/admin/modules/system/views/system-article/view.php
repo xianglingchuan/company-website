@@ -29,6 +29,7 @@ $this->registerCssFile(yii\helpers\Url::to('/style/css/my_shop.css'), ['depends'
 
             <?= DetailView::widget([
                 'model' => $model,
+                'id' => 'detailView',
                 'attributes' => [
                     'id',
                     [
@@ -38,13 +39,14 @@ $this->registerCssFile(yii\helpers\Url::to('/style/css/my_shop.css'), ['depends'
                     'title',
                     'author',
                     'source',
-                    [
+                    /*[
                         'attribute' => 'cover',
                         'format' => ['raw'],
                         'value' => !empty($model->cover) ? Html::img($model->getCover(), ['style' => "width:100px; height:100px;"]) : "",
-                    ],
+                    ],*/
                     'basic_facts',
                     'short_basic_facts',
+                    'describe',
                     'content:html',
                     //'is_del',
                     [

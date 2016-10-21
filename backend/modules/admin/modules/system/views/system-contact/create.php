@@ -42,7 +42,7 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('contactTel');?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "contactTel", $viewData['contactTel'], ["class"=>"form-control"]);?></div>
+                                <div class="col-sm-5"><?php echo Html::input("text", "contactTel", $viewData['contactTel'], ["class"=>"form-control"]);?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>
@@ -52,7 +52,7 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('contactPhone');?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "contactPhone", $viewData['contactPhone'], ["class"=>"form-control"]);?></div>
+                                <div class="col-sm-5"><?php echo Html::input("text", "contactPhone", $viewData['contactPhone'], ["class"=>"form-control"]);?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>
@@ -61,7 +61,7 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('contactEmail');?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "contactEmail", $viewData['contactEmail'], ["class"=>"form-control"]);?></div>
+                                <div class="col-sm-5"><?php echo Html::input("text", "contactEmail", $viewData['contactEmail'], ["class"=>"form-control"]);?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>
@@ -70,7 +70,7 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('contactAddressOne');?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "contactAddressOne", $viewData['contactAddressOne'], ["class"=>"form-control"]);?></div>
+                                <div class="col-sm-8"><?php echo Html::input("text", "contactAddressOne", $viewData['contactAddressOne'], ["class"=>"form-control"]);?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>
@@ -80,7 +80,7 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('contactAddressTwo');?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "contactAddressTwo", $viewData['contactAddressTwo'], ["class"=>"form-control"]);?></div>
+                                <div class="col-sm-8"><?php echo Html::input("text", "contactAddressTwo", $viewData['contactAddressTwo'], ["class"=>"form-control"]);?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>
@@ -89,7 +89,7 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('contactAddressThree');?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "contactAddressThree", $viewData['contactAddressThree'], ["class"=>"form-control"]);?></div>
+                                <div class="col-sm-8"><?php echo Html::input("text", "contactAddressThree", $viewData['contactAddressThree'], ["class"=>"form-control"]);?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>

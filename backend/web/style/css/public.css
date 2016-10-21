@@ -93,3 +93,7 @@ button.x_close {background: #205493;position: absolute;top: -15px;right: -15px;b
 .footer_container p{clear: both;margin-top: 8px;}
 .footer_container a{color: #205493;font-size: 14px;padding: 0 6px;}
 /*页脚   end*/
+
+
+#detailView th{min-width:150px;}
+#detailView th.action-column{min-width:150px;}

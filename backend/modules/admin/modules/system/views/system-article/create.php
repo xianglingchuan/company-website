@@ -32,7 +32,7 @@ $this->registerJsFile(Url::to('/style/summernote/summernote.js'), ['depends' => 
                             'method' => 'post',
                             'options' => ['enctype' => 'multipart/form-data',
                                 'class' => 'form-horizontal'],
-                            'fieldConfig' => ['inputOptions' => ['class' => 'form-control'],
+                                'fieldConfig' => ['inputOptions' => ['class' => 'form-control'],
                                 'labelOptions' => ['class' => "col-sm-2 control-label"],
                                 'template' => '<div class="form-group form-horizontal">{label}<div class="col-sm-4">{input}</div>{error}</div><div class="hr-line-dashed"></div>'],
                 ]);
@@ -49,12 +49,32 @@ $this->registerJsFile(Url::to('/style/summernote/summernote.js'), ['depends' => 
                         array_unshift($categoryList, ["id" => 0, "name" => "请选择分类"]);
                         echo $form->field($model, 'category_id')->dropDownList(ArrayHelper::map($categoryList, "id", "name"));
                         ?>
-                        <?= $form->field($model, 'title')->textInput(); ?>
+                        <?= $form->field($model, 'title',[
+                           'template' =>'<div class="form-group form-horizontal">{label}<div class="col-sm-6">{input}</div>{error}</div><div class="hr-line-dashed"></div>',  
+                           'labelOptions' => ['class' => 'col-lg-2 control-label'],                               
+                        ])->textInput(); ?>  
+                        
                         <?= $form->field($model, 'author')->textInput(); ?>
                         <?= $form->field($model, 'source')->textInput(); ?>
                         
-                        <?= $form->field($model, 'short_basic_facts')->textInput(); ?>    
-                        <?= $form->field($model, 'basic_facts')->textArea(); ?>
+                        <?= $form->field($model, 'short_basic_facts',[
+                           'template' =>'<div class="form-group form-horizontal">{label}<div class="col-sm-6">{input}</div>{error}</div><div class="hr-line-dashed"></div>',  
+                           'labelOptions' => ['class' => 'col-lg-2 control-label'],                               
+                        ])->textArea(); ?>    
+                        
+                        
+                        <?= $form->field($model, 'basic_facts',[
+                           'template' =>'<div class="form-group form-horizontal">{label}<div class="col-sm-6">{input}</div>{error}</div><div class="hr-line-dashed"></div>',  
+                           'labelOptions' => ['class' => 'col-lg-2 control-label'],                               
+                        ])->textArea(); ?>  
+                        
+                        
+                        <?= $form->field($model, 'describe',[
+                           'template' =>'<div class="form-group form-horizontal">{label}<div class="col-sm-6">{input}</div>{error}</div><div class="hr-line-dashed"></div>',  
+                           'labelOptions' => ['class' => 'col-lg-2 control-label'],                               
+                        ])->textArea(); ?>
+                        
+                        
                         <div style="display: none"><?php echo $form->field($model, 'content', ['template' => "{input}"])->hiddenInput(['value' => "", 'id' => "content"]); ?></div>
                         <div class="row" style="margin-bottom: 15px;">
                             <div class="col-lg-12">

@@ -27,18 +27,6 @@ AppAsset::register($this);
         <link href="/style/web/css/style.css" rel="stylesheet">
         <script src="/style/web/js/jquery.min.js"></script>
         <script src="/style/web/js/ban.js"></script>
-        <script>
-            $(function () {
-                $('.title-list li').mouseover(function () {
-                    var liindex = $('.title-list li').index(this);
-                    $(this).addClass('on').siblings().removeClass('on');
-                    $('.product-wrap div.product').eq(liindex).fadeIn(150).siblings('div.product').hide();
-                    var liWidth = $('.title-list li').width();
-                    $('.case .title-list p').stop(false, true).animate({'left': liindex * liWidth + 'px'}, 300);
-
-                });
-            });
-        </script>
     </head>
     <body>
         <?php $this->beginBody() ?>

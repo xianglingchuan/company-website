@@ -27,8 +27,8 @@ class SystemArticleWeb extends SystemArticle {
        if(intval($categoryId)>=1){
           $data->andWhere("category_id=:category_id",[":category_id"=>$categoryId]);   
        }
-       $pages = new Pagination(['totalCount' =>$data->count(), 'pageSize' => '2']);
-       $model = $data->offset($pages->offset)->limit($pages->limit)->all();
+       $pages = new Pagination(['totalCount' =>$data->count(), 'pageSize' => 10]);
+       $model = $data->offset($pages->offset)->limit($pages->limit)->orderBy("id DESC")->all();
        return ["model"=>$model, "pages"=>$pages];
     }    
     
@@ -51,4 +51,21 @@ class SystemArticleWeb extends SystemArticle {
                        [":id"=>$articleId, ":category_id"=>$categoryId, ":is_del"=>Models::IS_DEL_NO, ":is_show"=>Models::IS_SHOW_YES])->orderBy("id DESC")->asArray()->one();
         return $info;
     }
+    
+    
+    
+    /**
+     * 获取文章描述内容
+     */
+    public function getDescribe($describe, $limit=65){
+         $_content = strip_tags($describe);
+         $content = mb_substr($_content, 0, $limit, "utf-8");
+         $content = str_replace('　','', $content);
+         $content = str_replace(' ','', $content);
+         if(mb_strlen($_content, "utf-8") > $limit){
+             $content.="...";
+         }
+         return $content;
+    }
+    
 }

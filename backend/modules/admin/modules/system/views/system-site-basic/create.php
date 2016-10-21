@@ -52,7 +52,7 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteKeyword'); ?></label>
-                                <div class="col-sm-8"><?php echo Html::input("area", "siteKeyword", $viewData['siteKeyword'], ["class" => "form-control"]); ?></div>
+                                <div class="col-sm-8"><?php echo Html::textarea("siteKeyword", $viewData['siteKeyword'], ["class" => "form-control"]); ?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>
@@ -61,7 +61,7 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteDescription'); ?></label>
-                                <div class="col-sm-8"><?php echo Html::input("text", "siteDescription", $viewData['siteDescription'], ["class" => "form-control"]); ?></div>
+                                <div class="col-sm-8"><?php echo Html::textarea("siteDescription", $viewData['siteDescription'], ["class" => "form-control"]); ?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>

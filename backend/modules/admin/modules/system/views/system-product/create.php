@@ -47,7 +47,12 @@ $this->registerJsFile(Url::to('/style/summernote/summernote.js'), ['depends' => 
                         array_unshift($categoryList, ["id" => 0, "name" => "请选择分类"]);
                         echo $form->field($model, 'category_id')->dropDownList(ArrayHelper::map($categoryList, "id", "name"));
                         ?>
-                        <?= $form->field($model, 'title')->textInput(); ?>
+                        <?= $form->field($model, 'title',[
+                           'template' =>'<div class="form-group form-horizontal">{label}<div class="col-sm-6">{input}</div>{error}</div><div class="hr-line-dashed"></div>',  
+                           'labelOptions' => ['class' => 'col-lg-2 control-label'],                               
+                        ])->textInput(); ?> 
+                        
+                        
                         <?php //= $form->field($model, 'author')->textInput(); ?>
                         <div class="form-group form-horizontal">
                             <?php
@@ -61,9 +66,18 @@ $this->registerJsFile(Url::to('/style/summernote/summernote.js'), ['depends' => 
                             ])->fileInput();
                             ?>
                         </div>
-
-                        <?= $form->field($model, 'basic_facts')->textArea(); ?>
-                        <?= $form->field($model, 'short_basic_facts')->textInput(); ?>
+                        <?= $form->field($model, 'basic_facts',[
+                           'template' =>'<div class="form-group form-horizontal">{label}<div class="col-sm-6">{input}</div>{error}</div><div class="hr-line-dashed"></div>',  
+                           'labelOptions' => ['class' => 'col-lg-2 control-label'],                               
+                        ])->textArea(); ?> 
+                        
+                        <?= $form->field($model, 'short_basic_facts',[
+                           'template' =>'<div class="form-group form-horizontal">{label}<div class="col-sm-6">{input}</div>{error}</div><div class="hr-line-dashed"></div>',  
+                           'labelOptions' => ['class' => 'col-lg-2 control-label'],                               
+                        ])->textArea(); ?> 
+                        
+                        
+                        
                         <?= $form->field($model, 'is_show')->dropDownList(Models::getIsShow()); ?>
                         
                         <div style="display: none"><?php echo $form->field($model, 'content', ['template' => "{input}"])->hiddenInput(['value' => "", 'id' => "content"]); ?></div>

@@ -46,7 +46,7 @@ div,nav,ul,ol,h2,h3,h4,h5,p{margin:0;padding:0;}
     width:245px;margin-right:28px;margin-bottom:20px;
     transition:0.4s;-webkit-transition:0.4s;-moz-transition:0.4s;-o-transition:0.4s;-ms-transition:0.4s;}
 .product-wrap .product li.ml0{margin-left:0px;}
-.product-wrap .product li .img_box{display:block;width:249px;height:203px;padding:1px;border:2px solid #ddd;  text-align:center;}
+.product-wrap .product li .img_box{display:block;width:255px;height:210px;padding:1px;border:2px solid #ddd;  text-align:center;}
 .product-wrap .product li img{width:249px;height:203px;display:block;}
 .product-wrap .product li .cp_txt1{width:255px;height:45px;text-align:center;line-height:45px;font-size:18px; font-weight:bold;color:#333;}
 .product-wrap .product li:hover .cp_txt1{color:#9C0200;}
@@ -78,7 +78,7 @@ div,nav,ul,ol,h2,h3,h4,h5,p{margin:0;padding:0;}
 .xwzx ul li:hover .news-time{border:1px solid #9C0200;}
 .xwzx ul li:hover .news-time span{background:#9C0200}
 .xwzx ul li:hover a{color:#9C0200;}
-.news-time{width:53px;height:53px;display:block;float:left;border:1px solid #ccc;text-align:center;}
+.news-time{width:55px;height:55px;display:block;float:left;border:1px solid #ccc;text-align:center;}
 .news-time span{width:53px;height:30px;background:#ccc;color:#fff;font-size:24px;line-height:30px;}
 .news-time label{width:53px;height:23px;line-height:23px;color:#444;font-size:13px;text-align:center;}
 
@@ -102,7 +102,7 @@ div,nav,ul,ol,h2,h3,h4,h5,p{margin:0;padding:0;}
 .cpzx_plan1,.list_plan1,.xq_plan1{padding:20px 0;}
 .left_menu li {height:55px;padding-left:30px;background:#E9E7E7;margin:1px 0; font-size:20px;}
 .sj1{width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:7px solid #9C0200;margin-top:24px;}
-.left_menu li a{line-height:55px;width:153px;padding-left:55px;font-weight:bold;}
+.left_menu li a{line-height:55px;/*width:153px;*/padding-left:55px;font-weight:bold;}
 .left_menu li:hover{background:#9C0200;}
 .left_menu li:hover a{color:#fff}
 .left_menu li:hover .sj1{border-left:7px solid #fff;}
@@ -119,7 +119,7 @@ div,nav,ul,ol,h2,h3,h4,h5,p{margin:0;padding:0;}
 .wz>.fr .dq{color:#9C0200;}
 .cpzx_plan1_nr ul,.list_plan1_nr ul{overflow:hidden;}
 .cpzx_plan1_nr li{float:left;margin:20px 27px 0 0;width:253px;}
-.img_box1{width:249px;height:203px;padding:1px;border:2px solid #ddd;}
+.img_box1{width:255px;height:210px;padding:1px;border:2px solid #ddd;}
 .img_box1 img{width:249px;height:203px;}
 .cp_txt{width:253px;line-height:45px; height:45px;color:#333;font-size:18px;text-align:center; font-weight:bold;}
 .cpzx_plan1_nr li:hover .img_box1{border:2px solid #9C0200;}
@@ -127,7 +127,7 @@ div,nav,ul,ol,h2,h3,h4,h5,p{margin:0;padding:0;}
 .list_plan1_nr li{padding:20px 0;border-bottom:1px dashed #ddd;overflow:hidden;}
 .list_plan1_nr li span,.list_plan1_nr li a{float:left;}
 .list_plan1_nr li label{float:right;color:#666;font-size:13px;}
-.list_plan1_nr li span {color:#999;margin-right:15px;}
+.list_plan1_nr .content_list li span {color:#999;margin-right:15px;}
 .list_plan1_nr li a{color:#333;}
 .list_plan1_nr li:hover a,.list_plan1_nr li:hover label,.list_plan1_nr li:hover span{color:#9C0200}
 .title4 {
@@ -182,3 +182,28 @@ div,nav,ul,ol,h2,h3,h4,h5,p{margin:0;padding:0;}
 
 .zblx{ width:251px; overflow:hidden; margin:0 auto 0 auto; }
 .zblx img{ width:251px;}
+
+#mypage .pagination li a{ color:#666666; font-size: 16px;}
+#mypage{ font-size: 16px; text-align: center;}
+#mypage .pagination .activePageCssClass a{ color:#A00C0A; }
+
+#mypage li { float:none;}
+
+#mypage .disabledPageCssClass span, #mypage .firstPageCssClass span, #mypage .lastPageCssClass span, #mypage .nextPageCssClass span, #mypage .prevPageCssClass span{
+    color:#666666;
+}
+
+#mypage .disabledPageCssClass a, #mypage .firstPageCssClass a, #mypage .lastPageCssClass a, #mypage .nextPageCssClass a, #mypage .prevPageCssClass a{
+    color:#666666;
+}
+
+/*
+  "disabledPageCssClass"=>"disabledPageCssClass",
+                                "firstPageCssClass" => "",
+                                "lastPageCssClass" => "",
+                                "nextPageCssClass" => "",
+                                "prevPageCssClass" => ""
+*/
+
+
+

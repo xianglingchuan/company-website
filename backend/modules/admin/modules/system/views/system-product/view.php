@@ -30,6 +30,7 @@ $this->registerCssFile(yii\helpers\Url::to('/style/css/my_shop.css'), ['depends'
             <?=
             DetailView::widget([
                 'model' => $model,
+                'id' => 'detailView',
                 'attributes' => [
                     'id',
                     [
@@ -49,6 +50,7 @@ $this->registerCssFile(yii\helpers\Url::to('/style/css/my_shop.css'), ['depends'
                         'format' => ['raw'],
                         'value' => Models::getIsShow($model->is_show),
                     ],
+                    'content:html',
                     'created_at',
                     'created_uid',
                     'updated_at',

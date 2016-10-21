@@ -32,7 +32,13 @@ class IndexController extends Controller
     {
          //新闻
          $SystemArticleWeb = new SystemArticleWeb();
-         $articleList = $SystemArticleWeb->find()->where("is_del=:is_del AND is_show=:is_show", [":is_del"=>Models::IS_DEL_NO,":is_show"=>  Models::IS_SHOW_YES])->limit(4)->asArray()->all();
+         $articleList = $SystemArticleWeb->find()->where("is_del=:is_del AND is_show=:is_show", [":is_del"=>Models::IS_DEL_NO,":is_show"=>  Models::IS_SHOW_YES])
+                                          ->limit(4)->orderBy("id DESC")->asArray()->all();
+         if(!empty($articleList)){
+             foreach($articleList as &$buf){
+                 $buf['describe'] = $SystemArticleWeb->getDescribe($buf['describe']);
+             }
+         }
          //公司简介内容
          $model = new SettingWeb();
          //产品分类及内容

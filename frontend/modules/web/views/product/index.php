@@ -20,12 +20,6 @@ use yii\widgets\LinkPager;
                     <h5>产品中心</h5>
                     <span>Product Center</span>
                 </div>
-<!--                <ul>
-                    <li class="dqlm"><span class="sj1"></span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=11">椅套系列</a></li>
-                    <li><span class="sj1"></span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=12">桌布系列</a></li>
-                    <li><span class="sj1"></span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=13">窗帘系列</a></li>
-                    <li><span class="sj1"></span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=14">软包墙系列</a></li>
-                </ul>-->
                 <?= frontend\modules\web\widgets\ProductCategory::widget(); ?>
                 <?= frontend\modules\web\widgets\LeftAd::widget(); ?>
             </div>
@@ -84,10 +78,25 @@ use yii\widgets\LinkPager;
                                 }
                             }
                             ?>
-                            <?= LinkPager::widget(['pagination' => $list['pages']]); ?>
-                </ul>
-                <div class="fy"><a class="a1">12条</a> <a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=11" class="a1">上一页</a> <span>1</span> <a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=11&amp;page=2">2</a> <a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=11&amp;page=2" class="a1">下一页</a></div>
+                </ul>                
+                <?php // LinkPager::widget(['pagination' => $list['pages']]); ?>
+                
+
+                        <div id="mypage">
+                            <?= LinkPager::widget(['pagination' => $list['pages'], 
+                                "activePageCssClass"=>"activePageCssClass", 
+                                "disabledPageCssClass"=>"disabledPageCssClass",
+                                "firstPageCssClass" => "firstPageCssClass",
+                                "lastPageCssClass" => "lastPageCssClass",
+                                "nextPageCssClass" => "nextPageCssClass",
+                                "prevPageCssClass" => "prevPageCssClass"
+                                ]); ?>                            
+                        </div>
+                
             </div>
+            
+
+            
             <!--end 右侧内容-->
 
         </div>

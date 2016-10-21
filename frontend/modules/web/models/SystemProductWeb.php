@@ -28,7 +28,7 @@ class SystemProductWeb extends SystemProduct {
        if(intval($categoryId)>=1){
           $data->andWhere("category_id=:category_id",[":category_id"=>$categoryId]);   
        }
-       $pages = new Pagination(['totalCount' =>$data->count(), 'pageSize' => '2']);
+       $pages = new Pagination(['totalCount' =>$data->count(), 'pageSize' => 9]);
        $model = $data->offset($pages->offset)->limit($pages->limit)->asArray()->all();
        CommonHelp::handleImagePath($model, ["cover"]);
        return ["model"=>$model, "pages"=>$pages];

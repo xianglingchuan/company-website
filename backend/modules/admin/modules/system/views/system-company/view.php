@@ -26,6 +26,7 @@ $this->registerCssFile(yii\helpers\Url::to('/style/css/my_shop.css'), ['depends'
             <?=
             DetailView::widget([
                 'model' => $model,
+                'id' => 'detailView',
                 'attributes' => [
                     [
                         'label' => $model->myLabels('companyHomeImg'),

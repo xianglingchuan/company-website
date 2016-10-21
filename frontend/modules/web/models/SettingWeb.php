@@ -28,4 +28,21 @@ class SettingWeb extends Setting {
         }
     }
     
+    
+    /**
+     * 首页获取公司简介
+     */   
+    public function getCompanyContentByHome($limit=330){
+         $_content = strip_tags(Yii::$app->setting->get('companyContent'));
+         $content = mb_substr($_content, 0, $limit, "utf-8");
+         $content = str_replace('　','', $content);
+         $content = str_replace(' ','', $content);
+         if(mb_strlen($_content, "utf-8") > $limit){
+             $content.="...";
+         }
+         return $content;
+    }    
+    
+    
+    
 }
