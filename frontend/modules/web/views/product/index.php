@@ -1,4 +1,9 @@
 <?php
+$this->title = "产品中心-".Yii::$app->setting->get("siteName");
+$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->setting->get("siteDescription")], 'meta-description');
+$this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->setting->get("siteKeyword")], 'meta-keywords');
+?>
+<?php
 use yii\widgets\LinkPager;
 ?>
 <!--begin 顶部信息--> 
@@ -9,6 +14,16 @@ use yii\widgets\LinkPager;
 </div>
 <!--end 顶部信息-->   
 
+        <script>
+            $(function () {
+                $('#dwei ul li').mouseover(function () {
+                    $('#dwei ul li').each(function(){
+                       $(this).find("a p").css("display", "none");
+                    });
+                    $(this).find("a p").css("display", "block");
+                });
+            });
+        </script>
 
 <!--begin 内容-->
 <div id="main">
@@ -71,7 +86,9 @@ use yii\widgets\LinkPager;
                             if(!empty($list['model'])){
                                 foreach($list['model'] as $info){?>
                                 <li>
-                                    <a href="/web/product/view?id=<?php echo $info['id'];?>&category_id=<?php echo $info['category_id']; ?>" class="img_box1"><img src="<?php echo $info['cover'];?>" alt="<?php echo $info['title'];?>"></a>
+                                    <a href="/web/product/view?id=<?php echo $info['id'];?>&category_id=<?php echo $info['category_id']; ?>" class="img_box1"><img src="<?php echo $info['cover'];?>" alt="<?php echo $info['title'];?>">
+                                    <p><span>查看详情</span></p>
+                                    </a>
                                     <a href="/web/product/view?id=<?php echo $info['id'];?>&category_id=<?php echo $info['category_id']; ?>" class="cp_txt"><?php echo $info['title'];?></a>
                                 </li>
                                 <?php 

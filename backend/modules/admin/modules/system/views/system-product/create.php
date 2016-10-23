@@ -61,7 +61,7 @@ $this->registerJsFile(Url::to('/style/summernote/summernote.js'), ['depends' => 
                                 $url = "<div class='col-sm-2'>" . Html::img($model->getCover(), ['style' => "max-width:100px; height:100px;"]) . "</div>";
                             }
                             echo $form->field($model, 'cover', [
-                                'template' => "{label}<div class='col-sm-2'>{input}</div>\n{error}" . $url,
+                                'template' => "{label}<div class='col-sm-2'>{input}</div>\n{error}" . $url.'<p class="help-block">&nbsp;&nbsp;建议尺寸宽高400x400,大于将生成400x400的缩略图</p>',
                                 'labelOptions' => ['class' => 'col-sm-2 control-label'],
                             ])->fileInput();
                             ?>

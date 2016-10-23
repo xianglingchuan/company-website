@@ -30,7 +30,8 @@ class SystemProductWeb extends SystemProduct {
        }
        $pages = new Pagination(['totalCount' =>$data->count(), 'pageSize' => 9]);
        $model = $data->offset($pages->offset)->limit($pages->limit)->asArray()->all();
-       CommonHelp::handleImagePath($model, ["cover"]);
+       //$this->getCoverThumbnailKey();
+       CommonHelp::handleImagePath($model, ["cover"], $this->getCoverThumbnailKey(), 0);
        return ["model"=>$model, "pages"=>$pages];
     }    
     

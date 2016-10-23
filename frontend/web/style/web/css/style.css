@@ -118,7 +118,7 @@ div,nav,ul,ol,h2,h3,h4,h5,p{margin:0;padding:0;}
 .wz>.fr a{color:#333;}
 .wz>.fr .dq{color:#9C0200;}
 .cpzx_plan1_nr ul,.list_plan1_nr ul{overflow:hidden;}
-.cpzx_plan1_nr li{float:left;margin:20px 27px 0 0;width:253px;}
+.cpzx_plan1_nr li{float:left;margin:20px 27px 0 0;width:244px;}
 .img_box1{width:255px;height:210px;padding:1px;border:2px solid #ddd;}
 .img_box1 img{width:249px;height:203px;}
 .cp_txt{width:253px;line-height:45px; height:45px;color:#333;font-size:18px;text-align:center; font-weight:bold;}
@@ -197,13 +197,26 @@ div,nav,ul,ol,h2,h3,h4,h5,p{margin:0;padding:0;}
     color:#666666;
 }
 
-/*
-  "disabledPageCssClass"=>"disabledPageCssClass",
-                                "firstPageCssClass" => "",
-                                "lastPageCssClass" => "",
-                                "nextPageCssClass" => "",
-                                "prevPageCssClass" => ""
-*/
 
 
+
+.banner{ width:100%; height:480px; overflow:hidden; position:relative;font-size:0}
+.b-img{ height:500px;  position:absolute; left:0; top:0;}
+.b-img a{ display:block; height:480px; float:left;}
+.b-list{ height:50px; padding-top:450px; position:relative; margin:0 auto;z-index:1;}
+.b-list span{ display:block;cursor:pointer; width:14px; height:14px; border-radius:50%; border:3px solid #fff; float:left; margin:0 5px; _margin:0 3px;}
+.b-list .spcss{border:3px solid #9C0200;}
+.bar-left{ position:absolute; z-index:1; display:block; width:100px; height:100%; left:0px; background:none; top:0px; }
+.bar-right{ position:absolute;z-index:1; display:block; width:100px; height:100%; right:0px; background:none; top:0px; }
+.bar-left em{ display:block; width:25px; height:50px; background:url(../img/arrow.png) 0px 0px no-repeat; margin:0 auto; margin-top:240px;}
+.bar-right em{ display:block; width:25px; height:50px; background:url(../img/arrow.png) -25px 0px no-repeat; margin:0 auto; margin-top:240px;}
+.bar-left .emcss{ background-position:0px -50px;}
+.bar-right .emcss{ background-position:-25px -50px;}
+
+.img_box1 p{ position:absolute; left:inherit; top:85px; width:251px; height:205px; display:none; background:url(../img/tmbj.png)}
+.img_box1 p span{border-radius:5px; /*display:block;*/ color:#ffffff;background:#730A0B;width:120px;height:38px;text-align:center;line-height:38px;font-size:16px;margin-left:66px;margin-top:84px;}
+
+
+.img_box p{ position:absolute; left:inherit; top:194px; width:249px; height:203px; display:none; background:url(../img/tmbj.png)}
+.img_box p span{border-radius:5px; /*display:block;*/ color:#ffffff;background:#730A0B;width:120px;height:38px;text-align:center;line-height:38px;font-size:16px;margin-left:0px;margin-top:84px;}
 

@@ -1,3 +1,17 @@
+<?php
+$this->title = Yii::$app->setting->get("siteName");
+$description = Yii::$app->setting->get("siteDescription");
+$keyword = Yii::$app->setting->get("siteKeyword");
+if(!empty($info)){
+    $this->title = $info->title."-".$this->title;
+    $description = $info->basic_facts."-".$description;
+    $keyword = $info->short_basic_facts."-".$keyword;
+}
+$this->registerMetaTag(['name' => 'description', 'content' => $description], 'meta-description');
+$this->registerMetaTag(['name' => 'keywords', 'content' => $keyword], 'meta-keywords');
+?>
+
+
 <!--begin 顶部信息--> 
 <div id="header">
     <?= frontend\modules\web\widgets\TopLogo::widget(); ?>
@@ -33,7 +47,7 @@
                         });
                     } else if (scrollH < subnavT) {
                         $(".zfd").stop().css({
-                            "position": "static",
+                            "position": "static";
                         });
                     }
                 });

@@ -194,4 +194,14 @@ class SystemProduct extends \yii\db\ActiveRecord
         return $info;
     }
     
+    
+    /**
+     * 获取封面缩略图配置Key值
+     * @return array
+     */     
+    static function getCoverThumbnailKey(){
+        return "product.cover.thumbnail.size";
+    }
+    
+    
 }

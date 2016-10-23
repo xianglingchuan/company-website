@@ -1,3 +1,8 @@
+<?php
+$this->title = "企业资质-".Yii::$app->setting->get("siteName");
+$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->setting->get("siteDescription")], 'meta-description');
+$this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->setting->get("siteKeyword")], 'meta-keywords');
+?>
 <!--begin 顶部信息--> 
 <div id="header">
    <?= frontend\modules\web\widgets\TopLogo::widget(); ?>

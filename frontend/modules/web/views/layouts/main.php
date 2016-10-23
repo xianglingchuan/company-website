@@ -21,12 +21,10 @@ AppAsset::register($this);
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <!--<title>北京椅套厂家|北京酒店椅套|酒店椅套定做|酒店椅套批发|酒店弹力椅套|免烫弹力椅套|酒店宴会椅套|酒店餐厅椅套_北京华泰瑞诚纺织品有限公司</title>-->
-        <meta name="keywords" content="北京椅套厂家|北京酒店椅套|酒店椅套定做|酒店椅套批发|酒店弹力椅套|免烫弹力椅套|酒店宴会椅套|酒店餐厅椅套">
-        <meta name="description" content="北京华泰瑞诚纺织品有限公司专业酒店椅套厂家，致力于定做酒店椅套、酒店椅套批发、酒店弹力椅套、免烫弹力布椅套、酒店宴会椅套、酒店餐饮椅套、酒店餐厅椅套等，定制热线:01057169851">
         <link href="/style/web/css/style.css" rel="stylesheet">
         <script src="/style/web/js/jquery.min.js"></script>
-        <script src="/style/web/js/ban.js"></script>
+        <script src="/style/web/js/banner.js"></script>
+        <!--        <script src="/style/web/js/ban.js"></script>-->
     </head>
     <body>
         <?php $this->beginBody() ?>

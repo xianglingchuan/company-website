@@ -48,7 +48,7 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
                                 $url = "<div class='col-sm-2'>" . Html::img($model->getCover(), ['style' => "max-width:250px;"]) . "</div>";
                             }
                             echo $form->field($model, 'cover', [
-                                'template' => "{label}<div class='col-sm-2'>{input}</div>\n{error}" . $url,
+                                'template' => "{label}<div class='col-sm-2'>{input}</div>\n{error}" . $url.'<p class="help-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;建议尺寸宽高1920x500</p>',
                                 'labelOptions' => ['class' => 'col-sm-2 control-label'],
                             ])->fileInput();
                             ?>

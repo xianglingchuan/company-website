@@ -102,7 +102,7 @@ class SystemProductController extends Controller
                $data['cover'] = $model->cover;
                $model->load(Yii::$app->request->post());
             }
-            CommonHelp::updatePhoto($model, array("cover"), $data); 
+            CommonHelp::updatePhoto($model, array("cover"), $data, $model->getCoverThumbnailKey()); 
             if(!$model->validate() || !$model->save()){
                 $validateError = current($model->getFirstErrors());
                 $validateError = !empty($validateError) ? $validateError : "操作失败!";

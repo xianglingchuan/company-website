@@ -1,5 +1,9 @@
 <?php
 use yii\widgets\LinkPager;
+
+$this->title = "新闻中心-".Yii::$app->setting->get("siteName");
+$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->setting->get("siteDescription")], 'meta-description');
+$this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->setting->get("siteKeyword")], 'meta-keywords');
 ?>
 <!--begin 顶部信息--> 
 <div id="header">
@@ -70,21 +74,17 @@ use yii\widgets\LinkPager;
                             ?>
                         </ul>    
                         <div id="mypage">
-                            <?= LinkPager::widget(['pagination' => $articleList['pages'], "activePageCssClass"=>"activePageCssClass"]); ?>                            
+                            <?= LinkPager::widget(['pagination' => $articleList['pages'], 
+                                "activePageCssClass"=>"activePageCssClass", 
+                                "disabledPageCssClass"=>"disabledPageCssClass",
+                                "firstPageCssClass" => "firstPageCssClass",
+                                "lastPageCssClass" => "lastPageCssClass",
+                                "nextPageCssClass" => "nextPageCssClass",
+                                "prevPageCssClass" => "prevPageCssClass"
+                                ]); ?>                            
                         </div>
                         
-                                
-                            
-                            
-<!--                            <li><span>▪</span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=15&amp;id=46">北京华泰瑞诚定做沙发套</a><label>2016-07-14</label></li>
-                            <li><span>▪</span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=15&amp;id=45">北京华泰瑞诚沙发翻新</a><label>2016-07-14</label></li>
-                            <li><span>▪</span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=15&amp;id=44">北京华泰瑞诚军用迷彩桌布</a><label>2016-07-14</label></li>
-                            <li><span>▪</span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=15&amp;id=43">北京华泰瑞诚—中式坐垫</a><label>2016-07-14</label></li>
-                            <li><span>▪</span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=15&amp;id=42">北京华泰瑞诚纺织品有限公司-卷式窗帘</a><label>2016-07-11</label></li>
-                            <li><span>▪</span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=15&amp;id=41">一般意义的'弹力椅套'是伪概念！</a><label>2016-06-22</label></li>
-                            <li><span>▪</span><a href="http://www.bjhtrc.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=15&amp;id=40">北京华泰瑞诚—酒店椅套专业厂家！</a><label>2016-06-22</label></li>-->
                         
-                        <div class="fy"></div>
                     </div>
                 </div>
             </div>

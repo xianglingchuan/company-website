@@ -42,7 +42,7 @@ $this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend
                         <div class="form-group form-horizontal">
                             <div class="form-group form-horizontal">
                                 <label class='col-sm-2 control-label'><?php echo $model->myLabels('siteName'); ?></label>
-                                <div class="col-sm-4"><?php echo Html::input("text", "siteName", $viewData['siteName'], ["class" => "form-control"]); ?></div>
+                                <div class="col-sm-8"><?php echo Html::textarea("siteName", $viewData['siteName'], ["class" => "form-control"]); ?></div>
                             </div>
                             <div class="hr-line-dashed"></div>
                         </div>

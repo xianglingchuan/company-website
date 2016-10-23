@@ -1,4 +1,9 @@
-        <script>
+<?php
+$this->title = Yii::$app->setting->get("siteName");
+$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->setting->get("siteDescription")], 'meta-description');
+$this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->setting->get("siteKeyword")], 'meta-keywords');
+?>
+<script>
             $(function () {
                 $('.title-list li').mouseover(function () {
                     var liindex = $('.title-list li').index(this);
@@ -7,6 +12,12 @@
                     var liWidth = $('.title-list li').width();
                     $('.case .title-list p').stop(false, true).animate({'left': liindex * liWidth + 'px'}, 300);
                 });
+                $('.product-wrap ul li').mouseover(function () {
+                    $('.product-wrap ul li').each(function(){
+                       $(this).find("a p").css("display", "none");
+                    });
+                    $(this).find("a p").css("display", "block");
+                });                
             });
         </script>
 <!--begin 顶部信息--> 
@@ -62,7 +73,10 @@
                             echo '<div class="product" '.$style.'><ul class="cf">';
                             if(count($_category['products']) >=1){
                               foreach($_category['products'] as $product){ ?>
-                                    <li><a href="/web/product/view?id=<?php echo $product['id']; ?>&category_id=<?php echo $product['category_id'];?>" class="img_box"><img src="<?php echo $product['cover'];?>" alt="<?php echo $product['title'];?>"></a><a href="#" class="cp_txt1"><?php echo $product['title'];?></a></li>
+                                    <li><a href="/web/product/view?id=<?php echo $product['id']; ?>&category_id=<?php echo $product['category_id'];?>" class="img_box"><img src="<?php echo $product['cover'];?>" alt="<?php echo $product['title'];?>">
+                                        <p><span>查看详情</span></p>
+                                        </a>
+                                        <a href="/web/product/view?id=<?php echo $product['id']; ?>&category_id=<?php echo $product['category_id'];?>" class="cp_txt1"><?php echo $product['title'];?></a></li>
                               <?php
                               }
                             } 
