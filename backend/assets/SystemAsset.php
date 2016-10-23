@@ -13,11 +13,11 @@ class SystemAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        '/style/css/public.css',
-        '/style/css/iconfont.css'
+        '/backend/web/style/css/public.css',
+        '/backend/web/style/css/iconfont.css'
     ];
     public $js = [
-       '/style/js/bootstrap.min.js'
+       '/backend/web/style/js/bootstrap.min.js'
     ];
     public $depends = [
       'yii\web\YiiAsset',

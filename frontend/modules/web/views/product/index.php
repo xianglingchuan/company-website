@@ -14,17 +14,6 @@ use yii\widgets\LinkPager;
 </div>
 <!--end 顶部信息-->   
 
-        <script>
-            $(function () {
-                $('#dwei ul li').mouseover(function () {
-                    $('#dwei ul li').each(function(){
-                       $(this).find("a p").css("display", "none");
-                    });
-                    $(this).find("a p").css("display", "block");
-                });
-            });
-        </script>
-
 <!--begin 内容-->
 <div id="main">
     <div class="container">
@@ -85,9 +74,9 @@ use yii\widgets\LinkPager;
                             <?php
                             if(!empty($list['model'])){
                                 foreach($list['model'] as $info){?>
-                                <li>
+                                <li id="product_<?php echo $info['id'];?>">
                                     <a href="/web/product/view?id=<?php echo $info['id'];?>&category_id=<?php echo $info['category_id']; ?>" class="img_box1"><img src="<?php echo $info['cover'];?>" alt="<?php echo $info['title'];?>">
-                                    <p><span>查看详情</span></p>
+                                        <p><span>查看详情</span></p>
                                     </a>
                                     <a href="/web/product/view?id=<?php echo $info['id'];?>&category_id=<?php echo $info['category_id']; ?>" class="cp_txt"><?php echo $info['title'];?></a>
                                 </li>

@@ -8,8 +8,8 @@ use common\helpers\Models;
 
 $title = intval($model->id)>=1 ? "修改客户名录" : "创建客户名录";
 $this->title = $title ." - ".Yii::$app->setting->get('siteName');
-$this->registerCssFile(Url::to('/style/css/my_shop.css'), ['depends' => ['backend\assets\SystemAsset']]);
-$this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend\assets\SystemAsset']]);
+$this->registerCssFile(Url::to(Yii::$app->homeUrl.'/style/css/my_shop.css'), ['depends' => ['backend\assets\SystemAsset']]);
+$this->registerCssFile(Url::to(Yii::$app->homeUrl.'/style/css/common.css'), ['depends' => ['backend\assets\SystemAsset']]);
 ?>
 
 <div class="x_section_all">

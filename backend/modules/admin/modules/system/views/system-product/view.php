@@ -7,7 +7,7 @@ use backend\helpers\CommonHelp;
 
 $title = "产品详情";
 $this->title = $title . '-' . Yii::$app->setting->get('siteName');
-$this->registerCssFile(yii\helpers\Url::to('/style/css/my_shop.css'), ['depends' => ['backend\assets\SystemAsset']]);
+$this->registerCssFile(yii\helpers\Url::to(Yii::$app->homeUrl.'/style/css/my_shop.css'), ['depends' => ['backend\assets\SystemAsset']]);
 ?>
 
 <div class="x_section_all">

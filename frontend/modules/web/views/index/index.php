@@ -16,7 +16,8 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->setting->g
                     $('.product-wrap ul li').each(function(){
                        $(this).find("a p").css("display", "none");
                     });
-                    $(this).find("a p").css("display", "block");
+                    var id = $(this).attr("id");
+                    $("#"+id).find("a p").css("display", "block");
                 });                
             });
         </script>
@@ -73,7 +74,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->setting->g
                             echo '<div class="product" '.$style.'><ul class="cf">';
                             if(count($_category['products']) >=1){
                               foreach($_category['products'] as $product){ ?>
-                                    <li><a href="/web/product/view?id=<?php echo $product['id']; ?>&category_id=<?php echo $product['category_id'];?>" class="img_box"><img src="<?php echo $product['cover'];?>" alt="<?php echo $product['title'];?>">
+                            <li id="product_<?php echo $product['id']; ?>"><a href="/web/product/view?id=<?php echo $product['id']; ?>&category_id=<?php echo $product['category_id'];?>" class="img_box"><img src="<?php echo $product['cover'];?>" alt="<?php echo $product['title'];?>">
                                         <p><span>查看详情</span></p>
                                         </a>
                                         <a href="/web/product/view?id=<?php echo $product['id']; ?>&category_id=<?php echo $product['category_id'];?>" class="cp_txt1"><?php echo $product['title'];?></a></li>

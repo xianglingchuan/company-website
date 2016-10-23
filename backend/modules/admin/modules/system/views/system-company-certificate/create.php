@@ -8,12 +8,12 @@ use common\helpers\Models;
 
 $title = "编辑企业资质";
 $this->title = $title . " - " . Yii::$app->setting->get('siteName');
-$this->registerCssFile(Url::to('/style/css/my_shop.css'), ['depends' => ['backend\assets\SystemAsset']]);
-$this->registerCssFile(Url::to('/style/css/common.css'), ['depends' => ['backend\assets\SystemAsset']]);
+$this->registerCssFile(Url::to(Yii::$app->homeUrl.'/style/css/my_shop.css'), ['depends' => ['backend\assets\SystemAsset']]);
+$this->registerCssFile(Url::to(Yii::$app->homeUrl.'/style/css/common.css'), ['depends' => ['backend\assets\SystemAsset']]);
 
 //加载编辑器样式
-$this->registerCssFile(Url::to('/style/summernote/summernote.css'), ['depends' => ['backend\assets\SystemAsset']]);
-$this->registerJsFile(Url::to('/style/summernote/summernote.js'), ['depends' => ['backend\assets\SystemAsset']]);
+$this->registerCssFile(Url::to(Yii::$app->homeUrl.'/style/summernote/summernote.css'), ['depends' => ['backend\assets\SystemAsset']]);
+$this->registerJsFile(Url::to(Yii::$app->homeUrl.'/style/summernote/summernote.js'), ['depends' => ['backend\assets\SystemAsset']]);
 ?>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />  
 <div class="x_section_all">

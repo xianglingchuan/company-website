@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 $this->title = '个人信息-' . Yii::$app->setting->get('siteName');
-$this->registerCssFile(yii\helpers\Url::to('/style/css/my_shop.css'), ['depends' => ['backend\assets\SystemAsset']]);
+$this->registerCssFile(yii\helpers\Url::to(Yii::$app->homeUrl.'/style/css/my_shop.css'), ['depends' => ['backend\assets\SystemAsset']]);
 $this->registerCss('.x_normal_left {width:40%}');
 ?>
 <div class="x_section_all">

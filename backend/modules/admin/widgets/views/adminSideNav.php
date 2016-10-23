@@ -8,14 +8,9 @@ if (!empty($nav)) {
     ArrayHelper::multisort($nav, ['sort', 'id'], [SORT_ASC, SORT_ASC]);
     foreach ($nav as $_nav) {
         $value = strpos($_nav->path, $currPath)===false ? false : true;
-        $items[] = ['label' => '<span>' . $_nav->name . '</span>', 'url' => $_nav->path, 'active' =>  $value, "style"=>$_nav['style']];
+        $items[] = ['label' => '<span>' . $_nav->name . '</span>', 'url' => Yii::$app->homeUrl.$_nav->path, 'active' =>  $value, "style"=>$_nav['style']];
     }
 }
-//echo Nav::widget([
-//    'options' => ['class' => 'nch-sidebar-article-class'],
-//    'items' => $items,
-//    'encodeLabels' => false,
-//]);
 ?>
 <ul id="w0" class="nch-sidebar-article-class nav">
     <?php

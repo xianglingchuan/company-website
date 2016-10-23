@@ -25,22 +25,20 @@ $active = [
 if (!empty($nav)) {
     ArrayHelper::multisort($nav, ['sort', 'id'], [SORT_ASC, SORT_ASC]);
     foreach ($nav as $_nav) {
-        $items[] = ['label' => '<span>' . $_nav->name . '</span>', 'url' => $_nav->path, 'active' => isset($active[$_nav->path]) && in_array($currPath, $active[$_nav->path])];
+        $items[] = ['label' => '<span>' . $_nav->name . '</span>', 'url' =>Yii::$app->homeUrl.$_nav->path, 'active' => isset($active[$_nav->path]) && in_array($currPath, $active[$_nav->path])];
     }
 }
 ?>
 <div class="x_header_all">
     <div class="x_header">
         <div class="x_logo x_header_left">
-           
-                <?php //= Html::img('/style/img/index/logo.png') ?>
             <h2 style="margin-top: 15px;">京源佳益管理系统</h2>
         </div>
         <div class="x_header_right">
             <div class="x_header_right_top">
                 <span class="x_hello"><?= !empty(Yii::$app->user->identity->username) ? Yii::$app->user->identity->username : "暂无"; ?>，您好！</span>
                 <div class="x_exit">
-                    <img src="/style/img/index/iconfont-tuichu.png">
+                    <img src="<?php echo Yii::$app->homeUrl; ?>/style/img/index/iconfont-tuichu.png">
                     <?php
                     echo Html::beginForm(['/site/logout'], 'post', ['style' => 'display: inline'])
                         . Html::submitButton(
