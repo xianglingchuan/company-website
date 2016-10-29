@@ -47,7 +47,13 @@ $this->registerCssFile(yii\helpers\Url::to(Yii::$app->homeUrl.'/style/css/my_sho
                     'basic_facts',
                     'short_basic_facts',
                     'describe',
-                    'content:html',
+                    //'content:html',
+                    [
+                        'attribute' =>"content",
+                        'format' => 'html',
+                        'value' => "<div style='width:650px;'>".$model->content."</div>",
+                    ],
+                    
                     //'is_del',
                     [
                         'attribute' => 'is_show',

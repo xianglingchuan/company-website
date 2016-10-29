@@ -186,13 +186,14 @@ class CommonHelp extends \common\helpers\Common {
                         $content = str_replace($tmp, $filename, $content);
                     }else{
                         //去掉img中的其它标记内容
-                        $str = substr($tmp, strpos($tmp, "src=")+5);
+                        /*$str = substr($tmp, strpos($tmp, "src=")+5);
                         $filename = "";
                         if(!empty($str)){
                             $str = substr($str, 0, strpos($str, '"'));
                             $filename = "<img src=\"" . $str . "\">";
                         }
                         $content = str_replace($tmp, $filename, $content);
+                        */
                         //echo "<BR>".$str."<BR>";
                     }
                 }

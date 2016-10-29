@@ -55,7 +55,8 @@ class NewsController extends Controller
             $info = $model->getInfo($id); 
             if(!empty($info)){
                 $SystemCategoryWeb = new SystemCategoryWeb();
-                $categoryInfo = $SystemCategoryWeb->getInfo($info->category_id);                  
+                $categoryInfo = $SystemCategoryWeb->getInfo($info->category_id);  
+                $info->content = \frontend\helpers\CommonHelp::replaceContentImgUrl($info->content);
             }
             $nextInfo = $model->getNextArticle($info->id, $info->category_id);
             $lastInfo = $model->getLastArticle($info->id, $info->category_id);

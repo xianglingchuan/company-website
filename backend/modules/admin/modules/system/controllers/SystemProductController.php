@@ -78,6 +78,8 @@ class SystemProductController extends Controller
             if(empty($model)){
                $model = new SystemProductBackend();
                Yii::$app->getSession()->setFlash('error', '请求数据不存在!');
+            }else{
+                $model->content = CommonHelp::replaceContentImgUrl($model->content);
             }
         }
         echo $this->render('view', [
@@ -103,6 +105,10 @@ class SystemProductController extends Controller
                $model->load(Yii::$app->request->post());
             }
             CommonHelp::updatePhoto($model, array("cover"), $data, $model->getCoverThumbnailKey()); 
+            
+            $model->content = CommonHelp::saveSummernoteImgs($model->content);
+            $model->content = CommonHelp::removeContentFrontendDomain($model->content);
+            
             if(!$model->validate() || !$model->save()){
                 $validateError = current($model->getFirstErrors());
                 $validateError = !empty($validateError) ? $validateError : "操作失败!";
@@ -119,6 +125,10 @@ class SystemProductController extends Controller
                 Yii::$app->getSession()->setFlash('error', '请求数据不存在!');
             }
         }
+        
+        if(isset($model->content) && !empty($model->content)){
+            $model->content = CommonHelp::replaceContentImgUrl($model->content);
+        }        
         $categoryList = SystemCategoryBackend::find()->where("type=:type AND is_show=:is_show AND is_del=:is_del", 
                                                     [":type"=>SystemCategoryBackend::TYPE_PRODUCT, ":is_show"=>  Models::IS_SHOW_YES, ":is_del"=>Models::IS_DEL_NO])->asArray()->all();
         echo $this->render('create', [

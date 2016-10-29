@@ -215,7 +215,7 @@ class Common {
                     $src_replace = "src=\"".$hostUrl;
                     $str = str_replace($src, $src_replace, $str);
                 }
-                $style = "style=\"";
+                /*$style = "style=\"";
                 if (strpos($str, $style)) {
                     $style_replace = "style=\"width:100%;margin:0px; padding:0px; border:0px;";
                     $str = str_replace($style, $style_replace, $str);
@@ -223,7 +223,7 @@ class Common {
                     $endTag = "/>";
                     $endTag_replace =" style=\"width:100%;margin:0px; padding:0px; border:0px;\"/>";
                     $str = str_replace($endTag, $endTag_replace, $str);
-                }
+                }*/
                 $content = str_replace($tmp, $str, $content);
             }
         }

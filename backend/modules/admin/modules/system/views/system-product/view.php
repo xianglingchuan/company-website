@@ -50,7 +50,11 @@ $this->registerCssFile(yii\helpers\Url::to(Yii::$app->homeUrl.'/style/css/my_sho
                         'format' => ['raw'],
                         'value' => Models::getIsShow($model->is_show),
                     ],
-                    'content:html',
+                    [
+                        'attribute' =>"content",
+                        'format' => 'html',
+                        'value' => "<div style='width:650px;'>".$model->content."</div>",
+                    ],
                     'created_at',
                     'created_uid',
                     'updated_at',

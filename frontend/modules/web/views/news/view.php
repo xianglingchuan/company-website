@@ -93,8 +93,25 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $keyword], 'meta-keyw
                     }
                     ?>
                 </div>
-                <div class="fx fr">
-                    <!-- JiaThis Button BEGIN -->
+                
+                <div class="fx fr">             
+                <!-- JiaThis Button BEGIN -->
+                <div class="jiathis_style_24x24">
+                        <a class="jiathis_button_qzone"></a>
+                        <a class="jiathis_button_tsina"></a>
+                        <a class="jiathis_button_tqq"></a>
+                        <a class="jiathis_button_weixin"></a>
+                        <a class="jiathis_button_renren"></a>
+                        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+                        <a class="jiathis_counter_style"></a>
+                </div>
+                <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                <!-- JiaThis Button END -->
+                </div>
+
+                
+<!--                <div class="fx fr">
+                     JiaThis Button BEGIN 
                     <div class="jiathis_style"><span class="jiathis_txt">分享到：</span>
                         <a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
                         <a class="jiathis_button_tsina" title="分享到微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
@@ -112,8 +129,8 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $keyword], 'meta-keyw
                     </script>
                     <script type="text/javascript" src="/style/web/js/jia.js" charset="utf-8"></script>
                     <script type="text/javascript" src="/style/web/js/plugin.client.js" charset="utf-8"></script>
-                    <!-- JiaThis Button END -->
-                </div>
+                     JiaThis Button END 
+                </div>-->
                 <div class="fhsy"><a href="/web/index/index">返回首页</a></div>
             </div>
         </div>

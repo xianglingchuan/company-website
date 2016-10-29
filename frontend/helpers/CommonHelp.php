@@ -205,7 +205,7 @@ class CommonHelp extends Common {
      */
     static public function replaceContentImgUrl($content){     
         if(!empty($content)){
-            return self::replaceImgUrl($content, Yii::$app->request->hostInfo);            
+            return self::replaceImgUrl($content, Yii::$app->request->hostInfo."/");            
         }else{
             return "";
         }
