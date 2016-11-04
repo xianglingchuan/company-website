@@ -94,26 +94,27 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $keyword], 'meta-keyw
                         echo '<a href="/web/product/view?id='.$nextInfo['id'].'&category_id='.$nextInfo['category_id'].'">下一篇：'.$nextInfo['title'].'</a>';
                     }
                     ?>                </div>
-                <div class="fx fr">
-                    <!-- JiaThis Button BEGIN -->
-                    <div class="jiathis_style"><span class="jiathis_txt">分享到：</span>
-                        <a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
-                        <a class="jiathis_button_tsina" title="分享到微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
-                        <a class="jiathis_button_tqq" title="分享到腾讯微博"><span class="jiathis_txt jtico jtico_tqq"></span></a>
-                        <a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
-                        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-                        <a class="jiathis_counter_style"><span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_26" title="累计分享0次">0</span></a>
-                    </div>
-                    <script type="text/javascript">
-                        var jiathis_config = {
-                            summary: "",
-                            shortUrl: false,
-                            hideMore: false
-                        }
-                    </script>
-                    <script type="text/javascript" src="style/img/jia.js" charset="utf-8"></script><script type="text/javascript" src="style/img/plugin.client.js" charset="utf-8"></script>
-                    <!-- JiaThis Button END -->
+                
+                
+                <div class="fx fr">             
+                <!-- JiaThis Button BEGIN -->
+                <div class="jiathis_style_24x24">
+                        <a class="jiathis_button_qzone"></a>
+                        <a class="jiathis_button_tsina"></a>
+                        <a class="jiathis_button_tqq"></a>
+                        <a class="jiathis_button_weixin"></a>
+                        <a class="jiathis_button_renren"></a>
+                        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+                        <a class="jiathis_counter_style"></a>
                 </div>
+                <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                <!-- JiaThis Button END -->
+                </div>
+
+
+                
+                
+                
                 <div class="fhsy"><a href="/web/index/index">返回首页</a></div>
             </div>
             <!--end 右侧内容-->
